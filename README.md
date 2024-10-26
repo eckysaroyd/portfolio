@@ -1,73 +1,61 @@
-# 👋 Hello, I'm Sheetal Patil
+# 👋 Hello, I'm Eckysaroyd Nyato
 
-**Dynamic RPA Developer & Systems Analyst**  
-📍 Pune, India | 🌐 [![LinkedIn Badge](https://img.shields.io/badge/-LinkedIn-blue?style=flat&logo=Linkedin&logoColor=white)](https://www.linkedin.com/in/sheetal-patil-66575b29b/) [![Gmail Badge](https://img.shields.io/badge/-Gmail-c14438?style=flat&logo=Gmail&logoColor=white)](mailto:sheetalpatil130@gmail.com)
-
----
-
-## 🌟 About Me
-With a strong foundation in **Robotic Process Automation (RPA)** and **Systems Analysis**, I leverage technology to streamline business processes and drive efficiency. I specialize in building and implementing automated solutions that enhance workflows, especially in healthcare IT systems, ensuring compliance with industry standards and boosting user satisfaction.
+🎯 **Full Stack Web Developer** with a solid foundation in front-end and back-end development, specialized in creating dynamic, scalable, and user-centric web applications. I bring a balance of creativity and technical precision, ensuring high-quality solutions that meet complex requirements.
 
 ---
 
-## 🛠️ Skills & Tools
-<p align="center">
-  <img src="https://img.shields.io/badge/-RPA_Expert-1a73e8?style=flat-square&logo=automation&logoColor=white" />
-  <img src="https://img.shields.io/badge/-Process_Analysis_Expert-4caf50?style=flat-square&logo=processwire&logoColor=white" />
-  <img src="https://img.shields.io/badge/-Systems_Analysis_Expert-ff9800?style=flat-square&logo=systems&logoColor=white" />
-  <img src="https://img.shields.io/badge/-UiPath_Studio_Expert-ff5c58?style=flat-square&logo=UiPath&logoColor=white" />
-  <img src="https://img.shields.io/badge/-Healthcare_IT_Expert-00acc1?style=flat-square&logo=healthcare&logoColor=white" />
-</p>
+### 💼 **Professional Summary**
 
-- **RPA Tools:** UiPath Studio
-- **Process Analysis & Automation Design**
-- **Healthcare IT & Compliance:** EHR Systems, HIPAA Compliance
-- **Languages:** English
+With years of hands-on experience, my skills cover:
+- **Frontend Frameworks**: Vue.js, React.js, JavaScript, TypeScript
+- **Backend Technologies**: PHP, Laravel, Node.js, Express.js
+- **Databases**: MySQL, PostgreSQL
+- **Tools & Platforms**: AWS (EC2, S3), Linux, Docker, Git, GitLab, Jira
+
+Proficient in **API integration** and **UI/UX design**, I aim to deliver optimal results across every project.
 
 ---
 
-## 📊 Skills Proficiency
-| Skill                        | Level       |
-| ---------------------------- | ----------- |
-| **Robotic Process Automation**  | Expert |
-| **Process Analysis & Design**   | Expert |
-| **Systems Analysis**            | Expert |
-| **Healthcare IT**               | Expert |
+### 🛠️ **Technical Skills**
+
+| **Category**           | **Skills**                                                                                                                                                     |
+|------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Languages**          | ![PHP](https://img.shields.io/badge/PHP-Expert-777BB4?style=flat&logo=php&logoColor=white) ![JavaScript](https://img.shields.io/badge/JavaScript-Advanced-F7DF1E?style=flat&logo=javascript&logoColor=black) |
+| **Frontend**           | ![Vue.js](https://img.shields.io/badge/Vue.js-Advanced-4FC08D?style=flat&logo=vue.js&logoColor=white) ![React.js](https://img.shields.io/badge/React-Advanced-61DAFB?style=flat&logo=react&logoColor=black) |
+| **Backend**            | ![Laravel](https://img.shields.io/badge/Laravel-Expert-FF2D20?style=flat&logo=laravel&logoColor=white) ![Node.js](https://img.shields.io/badge/Node.js-Intermediate-339933?style=flat&logo=node.js&logoColor=white) |
+| **Databases**          | ![MySQL](https://img.shields.io/badge/MySQL-Advanced-4479A1?style=flat&logo=mysql&logoColor=white) ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-Intermediate-336791?style=flat&logo=postgresql&logoColor=white) |
+| **Version Control**    | ![Git](https://img.shields.io/badge/Git-Advanced-F05032?style=flat&logo=git&logoColor=white) ![GitLab](https://img.shields.io/badge/GitLab-Advanced-FC6D26?style=flat&logo=gitlab&logoColor=white) |
+| **Cloud & Deployment** | ![AWS](https://img.shields.io/badge/AWS-Intermediate-FF9900?style=flat&logo=amazon-aws&logoColor=white) ![Docker](https://img.shields.io/badge/Docker-Intermediate-2496ED?style=flat&logo=docker&logoColor=white) |
+| **Project Management** | ![Jira](https://img.shields.io/badge/Jira-Proficient-0052CC?style=flat&logo=jira&logoColor=white) |
+| **Design**             | ![Photoshop](https://img.shields.io/badge/Photoshop-Proficient-31A8FF?style=flat&logo=adobe-photoshop&logoColor=white) ![Figma](https://img.shields.io/badge/Figma-Proficient-F24E1E?style=flat&logo=figma&logoColor=white) |
 
 ---
 
-## 📚 Education
-- **Master of Computer Applications (MCA)**  
-  ABASAHEB GARWARE COLLEGE, Pune | 2021 - 2023
-- **Bachelor of Computer Applications (BCA)**  
-  ST. MIRAS COLLEGE FOR GIRLS, Pune | 2018 - 2021
+### 🌱 **Languages**
+
+- **English**
+- **Swahili**
 
 ---
 
-## 💼 Experience Highlights
-**Associate Systems Analyst**  
-  - 🎯 Lead complex system analysis and design initiatives to support business objectives.
-  - 🔄 Facilitate communication between technical and business teams, translating requirements into technical specs.
+### 📫 **Get in Touch**
 
-**Senior RPA Developer**  
-  - 🤖 Designed and implemented RPA solutions, streamlining workflows and automating routine tasks.
-  - 📈 Enhanced business efficiency through advanced automation integrations.
-
-**Customer Service Representative**  
-  - 💬 Supported clients with exceptional problem-solving and communication, fostering trust and satisfaction.
+- **Email**: [eckysaroyd.en@gmail.com](mailto:eckysaroyd.en@gmail.com)
+- **LinkedIn**: [linkedin.com/in/eckysaroyd](https://www.linkedin.com/in/eckysaroyd/)
+- **GitHub**: [github.com/eckysaroyd](https://github.com/eckysaroyd)
 
 ---
 
-## 🚀 Projects
-- **Healthcare Process Automation**: Developed RPA workflows for healthcare administrative tasks, reducing processing time by 40%.
-- **System Analysis & Optimization**: Led initiatives to enhance IT systems' functionality and user experience.
+### 💡 **Hobbies & Interests**
+
+Beyond coding, I enjoy **reading** and **swimming**, which helps me maintain a balanced and creative mindset.
 
 ---
 
-## 📈 What I'm Working On
-Currently deepening my expertise in **advanced RPA techniques**, **exploring new automation tools**, and **expanding knowledge in healthcare IT solutions**.
+### 📈 **Let’s Build Together!**
+
+I'm always excited to collaborate on innovative projects. If you're looking for a passionate developer to join your team or contribute to exciting initiatives, feel free to reach out. Let's create something amazing together!
 
 ---
 
-## 🤝 Let's Connect!
-I'm always eager to connect with like-minded professionals and explore collaborative opportunities. Feel free to reach out or connect on LinkedIn!
+Thanks for visiting my profile! 😊

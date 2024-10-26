@@ -1,56 +1,69 @@
 const info = {
     // ============ MAIN DETAILS ============
     main: {
-        name: "Sheetal Patil",
-        description: "With a strong foundation in Robotic Process Automation (RPA) and Systems Analysis, I leverage technology to streamline business processes and drive efficiency. I specialize in building and implementing automated solutions that enhance workflows, especially in healthcare IT systems, ensuring compliance with industry standards and boosting user satisfaction",
-        role: "Dynamic RPA Developer & Systems Analyst",
+        name: "Eckysaroyd Nyato",
+        description: "Seasoned Full Stack Web Developer with extensive experience in developing high-quality web applications and APIs. Proficient in both frontend and backend technologies, including Vue.js, React.js, PHP, Laravel, Node.js, Express.js, and various database systems like MySQL and PostgreSQL. Skilled in using project management tools such as Jira and version control systems like Git and GitLab. Experienced in containerization with Docker and deploying applications with platforms like Coolify. Competent in designing user interfaces using Adobe Photoshop, CorelDRAW, and Figma. Passionate about applying a diverse set of technologies to create innovative solutions that drive successful project outcomes.",
         photo: "rpa-transformed.webp",
-        email: "sheetalpatil130@gmail.com",
+        email: "eckysaroyd.en@gmail.com",
     },
 
     // ============ SOCIAL LINKS ============
     socials: {
-		github: "https://github.com/Sheetalvasant",
-		linkedin: "https://www.linkedin.com/in/sheetal-patil-66575b29b/",
+		github: "http://github.com/eckysaroyd",
+		linkedin: "https://www.linkedin.com/in/eckysaroyd/",
     },
 
     // ============ PROJECTS ============
     projects: [
         {
-			title: "Automated Healthcare Data Entry System",
-			description: "Developed a robotic process automation (RPA) solution to automate the data entry of patient records into Electronic Health Record (EHR) systems, significantly reducing the time taken for manual entry and minimizing errors.",
-            technologies: "UiPath, Excel, SQL, (RPA)",
-			github: "https://github.com/Sheetalvasant",
-            link: "#"
-		},
-
-        {
-			title: "Integrated Healthcare Workflow Automation",
-			description: "Designed and implemented an integrated automation workflow that optimized healthcare processes, improving the efficiency of patient management systems and enhancing user satisfaction through seamless communication between systems.",
-			technologies: "Systems Analysis and Design",
-			github: "https://github.com/Sheetalvasant",
-            link: "#"
+			title: "Kasudia Herbs",
+			description: "This web app has been crafted using Laravel and Vue.js, two of the most robust and versatile frameworks in the industry. Laravel, known for its elegant syntax and powerful features, forms the backbone of our application, providing a solid foundation for reliability and security.",
+            technologies: "Laravel,MySQL,Vue.js,coolify,docker",
+			github: "https://github.com/eckysaroyd",
+            link: "http://kasudiaherbs.com/"
 		},
         {
-			title: "Customer Service Chatbot Implementation",
-			description: "Led the development of an intelligent customer service chatbot using RPA technologies to automate responses to common queries, improving customer satisfaction by providing quick and accurate information..",
-			technologies: "UiPath,NLP tool",
-			link: "#"
+			title: "Overseas Education Link",
+			description: "As a web developer working on the Overseas Education Link website, I utilized a combination of technologies and skills to create a user-friendly and dynamic platform Here's an overview of the skills and deliverables used in building the website",
+            technologies: "Laravel,MySQL,Javascript,Ajax,Bootstrap,css3,html,Vue.js",
+			github: "https://github.com/eckysaroyd",
+            link: "https://overseaseducationlink.com/"
+		},
+        {
+			title: "tascript",
+			description: "TaScript is a website that offers excellent services in dealing with the following things: 1. Providing like servicesweb development, mobile app development, SEO, Webhosting, website analysis, page optimizations, SEO reports, programming, and graphic designs. 2. Free website template with backend. 3. Online free courses and solutions for software developers.",
+            technologies: "php,laravel,ajax,jQuery,MySQL,Bootstrap,CSS,HTML5",
+			github: "https://github.com/eckysaroyd",
+            link: "http://tascript.com/"
+		},
+        {
+			title: "ultimaxdev.com",
+			description: "I created the website's front end in addition to working as a web designer and content writer for a some articles.",
+            technologies: "REACTJS,Gatsby,HTML,Bootstrap,css3",
+			github: "https://github.com/eckysaroyd",
+            link: "https://ultimaxdev.com/"
+		},
+        {
+			title: "mgcs.ca",
+			description: " I developed full website including frontend and backend. in frontend I used laravel blade template and backend I saved my codes in controller. this project include admin panel whereby admin can post images and description to the website",
+            technologies: "PHP,MySQL,jQuery,HTML5,Bootstrap,CSS3,Laravel",
+			github: "http://github.com/eckysaroyd",
+            link: "http://mgcs.ca/"
 		},
     ],
 
     // ============ EDUCATION ============
     education: [
         {
-            school: "ABASAHEB GARWARE COLLEGE / India, Pune",
+            school: "Punjabi University / India, Punjab",
             degree: "Master of Computer Applications (MCA)",
-            duration: "2021 - 2023",
+            duration: "2022 - 2024",
             image: "abasaheb.webp"
         },
         {
-            school: "ST.MIRAS COLLEGE FOR GIRLS / India, Pune",
+            school: "Lovely Professional University / India, Punjab",
             degree: "Bachelor of Computer Applications (BCA)",
-            duration: "2018 - 2021",
+            duration: "2017 - 2020",
             image: "ST_MIRAS.webp"
         },
     ],
@@ -58,37 +71,48 @@ const info = {
     // ============ EXPERIENCE ============
     experience: [
         {
-            position: "Associate Systems Analyst",
-            company: "Altera Digital Health /India,Pune",
-            duration: "December 2023 - Present",
-            image: "altera_health.webp",
+            position: "Full-stack Developer",
+            company: "Chandorkar TechnologiesOPC Pvt. Ltd /India, Pune",
+            duration: "July 2023 - Present",
+            image: "chandorkar.webp",
             descriptions: [
-                "Design and implement systems to ensure optimal functionality and user satisfaction.",
-                "Facilitate communication between users and technical developers, translating business needs into technical specifications.",
-                "Manage and enhance IT systems, analyzing user requirements, identifying system issues, and proposing effective solutions."
+                "Contributed to developing high-quality web applications and APIs using Vue.js, JavaScript, TypeScript, Next.js, PHP, Laravel, Node.js, and Express.js. Proficient with MySQL Workbench, PostgreSQL, Jira Admin, Linux Server, Git, and GitLab. Experienced in API integration to deliver exceptional project results."
             ]
         },
         {
-            position: "Senior RPA Developer",
-            company: "Altera Digital Health /India,Pune",
-            duration: "April 2022 – December 2023",
-            image: "altera_health.webp",
+            position: "Senior Software Developer",
+            company: "TaScript/India, Patiala",
+            duration: "June 2022 – June 2023",
+            image: "tascript.webp",
             descriptions: [
-               "Designed, developed, and implemented robust robotic process automation solutions.",
-               "Leveraged advanced automation tools to streamline business processes, enhance efficiency, and optimize workflows.",
-               "Analyzed requirements, coded automation scripts, and ensured seamless integration with existing systems."
+               "Focused on mobile app UIs, website development, and API integration. Proficient in PHP, Laravel, Node.js, JavaScript, Vue.js, React, Linux Servers, AWS, Git, and GitLab."
             ]
         },
         {
-            position: "Customer Service Representative",
-            company: "Concentrix /India, Pune",
-            duration: "December 2020 - April 2022",
-            image: "concentrix.webp",
+            position: "Full Stack Developer - Part Time [Freelancer]",
+            company: "InIndia/India, Bengaluru",
+            duration: "March 2022 – December 2022",
+            image: "inindia_logo.webp",
             descriptions: [
-                "Provided exceptional support with effective communication and empathetic problem-solving.",
-                 
-                "Managed customer inquiries, resolved issues, and ensured overall satisfaction by providing personalized solutions.",
-                "Built rapport and trust with customers through active listening and clear communication."
+                "I worked part-time as a Full Stack Developer, designing employee management web applications using PHP, Laravel, MySQL, JavaScript, AJAX, and jQuery, along with API testing, JWT security, and Git version control."
+            ]
+        },
+        {
+            position: "PHP Web Developer",
+            company: "Protolabz eServices /India, Phagwara",
+            duration: "October 2021 – July 2022",
+            image: "protolabz_eservices_logo.webp",
+            descriptions: [
+                "Developed various web applications using WordPress and Shopify. Proficient in PHP, Laravel, MySQL, JSON, and frontend development."
+            ]
+        },
+        {
+            position: "Full-stack Developer",
+            company: "navQuery/Tanzania, Dar es Salaam",
+            duration: "October 2018 – June 2021",
+            image: "navquery.webp",
+            descriptions: [
+                "Specialized in the MERN stack, focusing on UI/UX design with Adobe Photoshop, CorelDRAW, and Figma. Proficient in React.js for frontend, MongoDB, Express.js, and Node.js for backend, with Git for version control and collaboration."
             ]
         }
     ],
@@ -110,7 +134,7 @@ const info = {
     },
 
     // ============ FOOTER ============
-    footer: "© 2024 Sheetal Patil. All Rights Reserved"
+    footer: "© 2024 Eckysaroyd. All Rights Reserved"
 }
 
 export default info
