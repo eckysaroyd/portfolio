@@ -16,41 +16,35 @@ const info = {
     // ============ PROJECTS ============
     projects: [
         {
-			title: "Kasudia Herbs",
-			description: "This web app has been crafted using Laravel and Vue.js, two of the most robust and versatile frameworks in the industry. Laravel, known for its elegant syntax and powerful features, forms the backbone of our application, providing a solid foundation for reliability and security.",
+            title: "Kasudia Herbs",
+            description: "This web app has been crafted using Laravel and Vue.js, two of the most robust and versatile frameworks in the industry. Laravel, known for its elegant syntax and powerful features, forms the backbone of our application, providing a solid foundation for reliability and security.",
             technologies: "Laravel,MySQL,Vue.js,coolify,docker",
-			github: "https://github.com/eckysaroyd",
+            github: "https://github.com/eckysaroyd",
             link: "http://kasudiaherbs.com/"
-		},
+        },
         {
-			title: "Overseas Education Link",
-			description: "As a web developer working on the Overseas Education Link website, I utilized a combination of technologies and skills to create a user-friendly and dynamic platform Here's an overview of the skills and deliverables used in building the website",
-            technologies: "Laravel,MySQL,Javascript,Ajax,Bootstrap,css3,html,Vue.js",
-			github: "https://github.com/eckysaroyd",
-            link: "https://overseaseducationlink.com/"
-		},
-        {
-			title: "tascript",
-			description: "TaScript is a website that offers excellent services in dealing with the following things: 1. Providing like servicesweb development, mobile app development, SEO, Webhosting, website analysis, page optimizations, SEO reports, programming, and graphic designs. 2. Free website template with backend. 3. Online free courses and solutions for software developers.",
-            technologies: "php,laravel,ajax,jQuery,MySQL,Bootstrap,CSS,HTML5",
-			github: "https://github.com/eckysaroyd",
-            link: "http://tascript.com/"
-		},
-        {
-			title: "ultimaxdev.com",
-			description: "I created the website's front end in addition to working as a web designer and content writer for a some articles.",
-            technologies: "REACTJS,Gatsby,HTML,Bootstrap,css3",
-			github: "https://github.com/eckysaroyd",
-            link: "https://ultimaxdev.com/"
-		},
-        {
-			title: "mgcs.ca",
-			description: " I developed full website including frontend and backend. in frontend I used laravel blade template and backend I saved my codes in controller. this project include admin panel whereby admin can post images and description to the website",
+            title: "mgcs.ca",
+            description: "I developed full website including frontend and backend. In the frontend, I used Laravel Blade templates and in the backend, I organized code in controllers. This project includes an admin panel where the admin can post images and descriptions to the website.",
             technologies: "PHP,MySQL,jQuery,HTML5,Bootstrap,CSS3,Laravel",
-			github: "http://github.com/eckysaroyd",
+            github: "http://github.com/eckysaroyd",
             link: "http://mgcs.ca/"
-		},
+        },
+        {
+            title: "Niccian Group Ltd",
+            description: "I developed a professional company website for Niccian Group Ltd to showcase their services and values. The site presents their mission, vision, clientele, and team members in a clean and informative layout. It supports educational and medical institutions in Tanzania with high-quality lab and medical equipment.",
+            technologies: "Laravel,HTML5,CSS3,JavaScript,Bootstrap",
+            github: "https://github.com/eckysaroyd",
+            link: "https://nicciangroup.shaunsoftwarehub.com/"
+        },
+        {
+            title: "JoyUnity",
+            description: "I helped build JoyUnity’s vibrant digital presence—an app-centered platform supporting creators globally. The site includes information on the app’s mission, features, timeline, and user testimonials. It's designed to reflect the platform’s values of inclusivity, real-time rewards, and a global creative community.",
+            technologies: "Laravel,HTML5,CSS3,JavaScript,Bootstrap",
+            github: "https://github.com/eckysaroyd",
+            link: "https://joyunity.com/"
+        }
     ],
+
 
     // ============ EDUCATION ============
     education: [
@@ -73,7 +67,7 @@ const info = {
         {
             position: "Full-stack Developer",
             company: "Chandorkar TechnologiesOPC Pvt. Ltd /India, Pune",
-            duration: "July 2023 - Present",
+            duration: "July 2023 - March 2025",
             image: "chandorkar.webp",
             descriptions: [
                 "Contributed to developing high-quality web applications and APIs using Vue.js, JavaScript, TypeScript, Next.js, PHP, Laravel, Node.js, and Express.js. Proficient with MySQL Workbench, PostgreSQL, Jira Admin, Linux Server, Git, and GitLab. Experienced in API integration to deliver exceptional project results."
