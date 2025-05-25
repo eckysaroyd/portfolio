@@ -9,7 +9,7 @@ function Contact() {
       {/* =========== TITLE =========== */}
       <h5 className="text-5xl font-bold text-zinc-900 dark:text-zinc-100">
       Connect With Me:{" "}
-        <span className="text-red-800 dark:text-red-500">
+        <span className=" text-[#c312e3] dark:text-[#c312e3]">
            Explore Opportunities
         </span>
       </h5>
@@ -26,7 +26,7 @@ function Contact() {
           href={user_info.socials.linkedin}
           className="flex gap-4 text-zinc-600 dark:text-zinc-300 hover:dark:text-zinc-300 hover:text-zinc-700 transition-all duration-300 mt-4"
         >
-          <FaLinkedin className="self-center text-lg text-red-800 dark:text-red-500" />
+          <FaLinkedin className="self-center text-lg text-[#c312e3] dark:text-[#c312e3]" />
           <span className="self-center">Follow on Linkedin</span>
         </a>
       </div>
@@ -38,7 +38,7 @@ function Contact() {
         href={`mailto:${user_info.main.email}`}
         className="flex mt-6 text-zinc-600 dark:text-zinc-300 hover:dark:text-zinc-300 gap-4 hover:text-zinc-700 transition-all duration-30"
       >
-        <MdEmail className="self-center text-lg text-red-800 dark:text-red-500" />
+        <MdEmail className="self-center text-lg text-[#c312e3] dark:text-[#c312e3]" />
         <span>{user_info.main.email}</span>
       </a>
     </section>

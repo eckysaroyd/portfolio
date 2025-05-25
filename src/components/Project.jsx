@@ -7,7 +7,7 @@ function Project({ title, description, technologies, link, github }) {
         {/* =========== TECHNOLOGIES USED =========== */}
         {technologies.split(",").map((tech, index) => (
           <span
-            className="inline-flex items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium bg-red-100 text-red-800 dark:bg-red-800/30 dark:text-red-500"
+            className="inline-flex items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium bg-[#a039b461]  text-[#c312e3] dark:bg-[#985fa23d] dark:text-[#c312e3]"
             key={index}
           >
             {tech}
@@ -24,21 +24,33 @@ function Project({ title, description, technologies, link, github }) {
       </p>
 
       <div className="flex gap-6 text-zinc-600 dark:text-zinc-300 font-medium">
-        {/* =========== PROJECT LINK =========== */}
-        <a href={link} className="flex gap-2 mt-4 hover:text-red-800 hover:dark:text-red-500 cursor-pointer transition-all duration-300">
-          <CiLink className="text-2xl self-center" />
-          <span className="text-xs self-center">
-            View Project
-          </span>
-        </a>
-        {/* =========== PROJECT GITHUB =========== */}
-        <a href={github} className="flex gap-2 mt-4 hover:text-red-800 hover:dark:text-red-500 cursor-pointer transition-all duration-300">
-          <CiLink className="text-2xl self-center" />
-          <span className="text-xs self-center">
-            View Github
-          </span>
-        </a>
-      </div>
+  {/* =========== PROJECT LINK =========== */}
+  <a
+    href={link}
+    target="_blank"
+    rel="noreferrer"
+    className="flex gap-2 mt-4 hover:text-[#c312e3] hover:dark:text-[#c312e3] cursor-pointer transition-all duration-300"
+  >
+    <CiLink className="text-2xl self-center" />
+    <span className="text-xs self-center">
+      View Project
+    </span>
+  </a>
+
+  {/* =========== PROJECT GITHUB =========== */}
+  <a
+    href={github}
+    target="_blank"
+    rel="noreferrer"
+    className="flex gap-2 mt-4 hover:text-[#c312e3] hover:dark:text-[#c312e3] cursor-pointer transition-all duration-300"
+  >
+    <CiLink className="text-2xl self-center" />
+    <span className="text-xs self-center">
+      View Github
+    </span>
+  </a>
+</div>
+
     </div>
   );
 }

@@ -33,7 +33,7 @@ function Footer({ theme }) {
         onClick={() => scrollToTop()}
         className="text-zinc-600 self-center mt-2 md:mt-0 dark:text-zinc-300 mx-auto md:mx-0 text-sm font-light flex gap-2"
       >
-        <FaArrowCircleUp className="self-center text-red-800 dark:text-red-500" /> Go back to top
+        <FaArrowCircleUp className="self-center text-[#c312e3] dark:text-[#c312e3]" /> Go back to top
       </button>
     </footer>
   );

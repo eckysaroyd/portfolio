@@ -2,8 +2,8 @@ const info = {
     // ============ MAIN DETAILS ============
     main: {
         name: "Eckysaroyd Nyato",
-        description: "Seasoned Full Stack Web Developer with extensive experience in developing high-quality web applications and APIs. Proficient in both frontend and backend technologies, including Vue.js, React.js, PHP, Laravel, Node.js, Express.js, and various database systems like MySQL and PostgreSQL. Skilled in using project management tools such as Jira and version control systems like Git and GitLab. Experienced in containerization with Docker and deploying applications with platforms like Coolify. Competent in designing user interfaces using Adobe Photoshop, CorelDRAW, and Figma. Passionate about applying a diverse set of technologies to create innovative solutions that drive successful project outcomes.",
-        photo: "rpa-transformed.webp",
+        description: "Versatile Full Stack Web Developer with strong expertise in building robust web applications and APIs. Proficient in modern frontend and backend frameworks including Vue.js, React, PHP, Laravel, Node.js, and Express, with solid experience in MySQL and PostgreSQL. Skilled in Git, GitLab, Jira, Docker, and deployment tools like Coolify. Adept at UI design using Figma, Photoshop, and CorelDRAW. Passionate about leveraging diverse technologies to deliver impactful, high-quality solutions.",
+        photo: "ecky _picture.webp",
         email: "eckysaroyd.en@gmail.com",
     },
 
@@ -14,37 +14,43 @@ const info = {
     },
 
     // ============ PROJECTS ============
-    projects: [
-        {
-            title: "Kasudia Herbs",
-            description: "This web app has been crafted using Laravel and Vue.js, two of the most robust and versatile frameworks in the industry. Laravel, known for its elegant syntax and powerful features, forms the backbone of our application, providing a solid foundation for reliability and security.",
-            technologies: "Laravel,MySQL,Vue.js,coolify,docker",
-            github: "https://github.com/eckysaroyd",
-            link: "http://kasudiaherbs.com/"
-        },
-        {
-            title: "mgcs.ca",
-            description: "I developed full website including frontend and backend. In the frontend, I used Laravel Blade templates and in the backend, I organized code in controllers. This project includes an admin panel where the admin can post images and descriptions to the website.",
-            technologies: "PHP,MySQL,jQuery,HTML5,Bootstrap,CSS3,Laravel",
-            github: "http://github.com/eckysaroyd",
-            link: "http://mgcs.ca/"
-        },
-        {
-            title: "Niccian Group Ltd",
-            description: "I developed a professional company website for Niccian Group Ltd to showcase their services and values. The site presents their mission, vision, clientele, and team members in a clean and informative layout. It supports educational and medical institutions in Tanzania with high-quality lab and medical equipment.",
-            technologies: "Laravel,HTML5,CSS3,JavaScript,Bootstrap",
-            github: "https://github.com/eckysaroyd",
-            link: "https://nicciangroup.shaunsoftwarehub.com/"
-        },
-        {
-            title: "JoyUnity",
-            description: "I helped build JoyUnity’s vibrant digital presence—an app-centered platform supporting creators globally. The site includes information on the app’s mission, features, timeline, and user testimonials. It's designed to reflect the platform’s values of inclusivity, real-time rewards, and a global creative community.",
-            technologies: "Laravel,HTML5,CSS3,JavaScript,Bootstrap",
-            github: "https://github.com/eckysaroyd",
-            link: "https://joyunity.com/"
-        }
+   projects: [
+    {
+        title: "Kasudia Herbs",
+        description: "A herbal web app built with Laravel and Vue.js. Offers seamless user experience, secure architecture, and a modern interface for managing products and customer interactions.",
+        technologies: "Laravel,MySQL,Vue.js,coolify,docker",
+        github: "https://github.com/eckysaroyd",
+        link: "http://kasudia.com/"
+    },
+    {
+        title: "WoW Laundry",
+        description: "A laundry service platform built with Laravel and Vue.js. Features eco-friendly services, pickup and delivery, and a modern responsive UI using Tailwind CSS.",
+        technologies: "Laravel,Vue.js,Tailwind CSS,JavaScript,HTML5",
+        github: "https://github.com/eckysaroyd",
+        link: "https://products.shaunsoftwarehub.com/"
+    },
+    {
+        title: "mgcs.ca",
+        description: "A corporate website with Laravel Blade frontend and backend admin panel. Admins can post images, content, and manage site data through a simple CMS interface.",
+        technologies: "PHP,MySQL,jQuery,HTML5,Bootstrap,CSS3,Laravel",
+        github: "http://github.com/eckysaroyd",
+        link: "http://mgcs.ca/"
+    },
+    {
+        title: "Niccian Group Ltd",
+        description: "Company website for a Tanzanian firm showcasing services and team. Designed using Laravel and Bootstrap with responsive layout and clean business presentation.",
+        technologies: "Laravel,HTML5,CSS3,JavaScript,Bootstrap",
+        github: "https://github.com/eckysaroyd",
+        link: "https://nicciangroup.shaunsoftwarehub.com/"
+    },
+    {
+        title: "JoyUnity",
+        description: "Cross-platform platform for creators featuring live streaming, wallet, and rewards. Built using Laravel and Flutter for scalability and smooth performance across devices.",
+        technologies: "PHP,Laravel,Flutter,HTML5,CSS3,JavaScript,Bootstrap",
+        github: "https://github.com/eckysaroyd",
+        link: "https://joyunity.com/"
+    }
     ],
-
 
     // ============ EDUCATION ============
     education: [
@@ -52,13 +58,13 @@ const info = {
             school: "Punjabi University / India, Punjab",
             degree: "Master of Computer Applications (MCA)",
             duration: "2022 - 2024",
-            image: "abasaheb.webp"
+            image: "punjabiuniverysity.webp"
         },
         {
             school: "Lovely Professional University / India, Punjab",
             degree: "Bachelor of Computer Applications (BCA)",
             duration: "2017 - 2020",
-            image: "ST_MIRAS.webp"
+            image: "lpu.webp"
         },
     ],
 
@@ -112,12 +118,19 @@ const info = {
     ],
 
     // ============ CERTIFICATES ============
-    certificates: [
+    certificates:
+    [
         {
-            title: "Introduction to Selenium",
-            description: "Provided by Coursera & Authorized by IBM",
-            icon: "ibm",
-            link: "#",
+            title: "FULL STACK DEVELOPER",
+            description: "React.js, Express.js and +2 skills - Issued by Board Infinity (Nov 2019)",
+            icon: "board_infinity_logo.webp",
+            link: "#"
+        },
+        {
+            title: "THE SOFTWARE ADVANCED TEST DEVELOPMENT",
+            description: "Advanced QA methodologies and tools - Issued by QAMatters (Jul 2019)",
+            icon: "qat360_logo.webp",
+            link: "#"
         }
     ],
 
@@ -130,5 +143,4 @@ const info = {
     // ============ FOOTER ============
     footer: "© 2024 Eckysaroyd. All Rights Reserved"
 }
-
 export default info

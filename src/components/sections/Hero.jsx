@@ -20,7 +20,7 @@ function Hero() {
         <div className="flex gap-2 align-center flex-wrap md:flex-nowrap">
           <div className="lg:w-[80%] text-zinc-900 dark:text-zinc-100 self-center">
             <h2 className="text-xl">{user_info.main.role}</h2>
-            <h1 className="font-black mt-3 text-5xl lg:w-[85%]">
+            <h1 className="font-black mt-3  text-[#c312e3] text-5xl lg:w-[85%]">
               {user_info.main.name}
             </h1>
 
@@ -31,13 +31,13 @@ function Hero() {
             <div className="flex gap-2 mt-6">
               <a
                 href="#projects"
-                className="px-6 py-3 border border-black hover:bg-red-800 hover:text-white hover:border-red-800 dark:border-white font-medium transition-all duration-300"
+                className="px-6 py-3 border border-black hover:bg-[#c312e3] hover:text-white hover:border-red-800 dark:border-white font-medium transition-all duration-300"
               >
                 Projects
               </a>
               <a
                 href="#contact"
-                className="px-6 py-3 hover:text-red-800 dark:hover:text-red-500 transition-all duration-300 flex gap-3 hover:gap-4"
+                className="px-6 py-3 hover:text-[#c312e3] dark:hover:text-[#c312e3] transition-all duration-300 flex gap-3 hover:gap-4"
               >
                 <span className="self-center font-medium">Contact</span>
                 <IoIosArrowForward className="self-center" />
@@ -47,7 +47,7 @@ function Hero() {
 
           <div className="hidden lg:block w-[480px] self-center">
             <img
-              className="rounded-[10%] transform rotate-3"
+              className="rounded-[10%] transform rotate-4"
               src={user_info.main.photo}
               alt="sample pic"
             />

@@ -1,9 +1,7 @@
 import user_info from "../../data/user_info.js";
 import { FaLandmark } from "react-icons/fa";
 import { FaBuildingUser } from "react-icons/fa6";
-import { FcGoogle } from "react-icons/fc";
 import { PiCertificateFill } from "react-icons/pi";
-import { SiHackerrank, SiIbm } from "react-icons/si";
 
 function EducationAndExperience() {
   return (
@@ -12,7 +10,7 @@ function EducationAndExperience() {
       <div className="w-full md:w-[80%]">
         {/* =========== EDUCATION TITLE =========== */}
         <h4 className="text-xl dark:text-white mb-4 font-bold flex gap-2 items-center">
-          <FaLandmark className="text-xl text-red-800 dark:text-red-500" />
+          <FaLandmark className="text-xl text-[#c312e3] dark:text-[#c312e3]" />
           Education
         </h4>
 
@@ -55,7 +53,7 @@ function EducationAndExperience() {
 
         {/* =========== CERTIFICATES TITLE =========== */}
         <h4 className="text-xl dark:text-white mt-6 font-bold flex gap-2 items-center">
-          <PiCertificateFill className="text-2xl text-red-800 dark:text-red-500" />
+          <PiCertificateFill className="text-2xl text-[#c312e3] dark:text-[#c312e3]" />
           Certificates
         </h4>
 
@@ -69,17 +67,15 @@ function EducationAndExperience() {
               {user_info.certificates.map((cert, index) => {
                 return (
                   <div className="hs-carousel-slide relative" key={index}>
-                    {cert.icon === "ibm" ? (
-                      <SiIbm className="text-blue-500 absolute right-5 top-0 text-5xl" />
-                    ) : cert.icon === "google" ? (
-                      <FcGoogle className="text-blue-500 absolute right-5 top-3 text-3xl" />
-                    ) : (
-                      <SiHackerrank className="text-green-500 absolute right-5 top-3 text-3xl" />
-                    )}
+                    <img src={cert.icon}
+                        alt="Certificate Icon"
+                        className="absolute right-5 top-3 w-10 h-10 rounded-full"
+                      />
+
 
                     <div className="flex justify-center items-center h-full bg-gray-100 p-6 dark:bg-neutral-900">
                       <div className="hs-tooltip [--placement:bottom] inline-block">
-                        <a href={cert.link} target="_blank" rel="noreferrer" className="hs-tooltip-toggle text-center text-gray-800 dark:text-white hover:text-red-800 hover:dark:text-red-500">
+                        <a href={cert.link} target="_blank" rel="noreferrer" className="hs-tooltip-toggle text-center text-gray-800 dark:text-white hover:text-[#c312e3] hover:dark:text-[#c312e3]">
                           {/* =========== CERTIFICATE NAME =========== */}
                           <p className=" transition duration-700 px-6 font-bold">
                             {cert.title}
@@ -165,7 +161,7 @@ function EducationAndExperience() {
       <div className="w-full">
         {/* =========== EXPERIENCE TITLE =========== */}
         <h4 className="text-xl dark:text-white mb-4 font-bold flex gap-2 items-center">
-          <FaBuildingUser className="text-2xl text-red-800 dark:text-red-500" />
+          <FaBuildingUser className="text-2xl text-[#c312e3] dark:text-[#c312e3]" />
           Experience
         </h4>
 
@@ -206,7 +202,7 @@ function EducationAndExperience() {
                         return (
                           <li className="flex space-x-3" key={index}>
                             <svg
-                              className="flex-shrink-0 size-4 mt-0.5 text-red-800 dark:text-red-500"
+                              className="flex-shrink-0 size-4 mt-0.5 text-[#c312e3] dark:text-[#c312e3]"
                               xmlns="http://www.w3.org/2000/svg"
                               width="24"
                               height="24"
