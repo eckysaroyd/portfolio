@@ -25,7 +25,7 @@ const info = {
     {
         title: "WoW Laundry",
         description: "A laundry service platform built with Laravel and Vue.js. Features eco-friendly services, pickup and delivery, and a modern responsive UI using Tailwind CSS.",
-        technologies: "Laravel,Vue.js,Tailwind CSS,JavaScript,HTML5",
+        technologies: "Laravel,Vue.js,Tailwind,JavaScript,HTML5",
         github: "https://github.com/eckysaroyd",
         link: "https://products.shaunsoftwarehub.com/"
     },
