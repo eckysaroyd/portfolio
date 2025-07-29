@@ -2,7 +2,7 @@ import { AppContext } from "../App.jsx";
 import { useContext, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 
-import ToggleTheme from "../components/ToggleTheme.jsx";
+import AnimatedStarfield from "../components/AnimatedStarfield.jsx";
 
 import Hero from "../components/sections/Hero.jsx";
 import Projects from "../components/sections/Projects.jsx";
@@ -20,18 +20,20 @@ function Homepage() {
   }, [location.pathname]);
 
   return (
-    <div className="bg-zinc-100 dark:bg-zinc-900">
-      <div className="xl:w-[1200px] md:mx-auto h-full border-x border-zinc-100 dark:border-zinc-800 bg-white dark:bg-zinc-950">
-        <ToggleTheme switchTheme={switchTheme} />
+    <div className="relative min-h-screen">
+      <AnimatedStarfield />
+      <div className="relative z-10">
+        <div className="xl:w-[1200px] md:mx-auto h-full border-x border-white/10 bg-black/30 backdrop-blur-md rounded-3xl mt-10 mb-10 border border-white/10 px-6 lg:px-12">
 
-        <Hero />
-        <Projects />
-				<EducationAndExperience />
-        <Skills />
-        <Contact />
+          <Hero />
+          <Projects />
+          <EducationAndExperience />
+          <Skills />
+          <Contact />
 
-        <hr className="mt-12 border border-zinc-300 dark:border-zinc-800" />
-        <Footer theme={theme} />
+          <hr className="mt-12 border border-white/20" />
+          <Footer theme={theme} />
+        </div>
       </div>
     </div>
   );

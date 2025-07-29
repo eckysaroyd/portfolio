@@ -3,54 +3,110 @@ import { IoIosArrowForward } from "react-icons/io";
 
 function Hero() {
   return (
-    <section id="hero" className="pb-28 pt-24 sm:pt-28 md:pt-44 flex px-6 lg:px-24">
-      <div className="self-center">
-        <div className="hs-tooltip [--placement:right] w-20 hs-tooltip-toggle">
-          <img
-            src={user_info.main.photo}
-            className="rounded-full mb-6 lg:hidden"
-            alt="Sample Pic"
-          />
-
-          {/* =========== TOOLTIP TEXT =========== */}
-          <span className="hs-tooltip-content hs-tooltip-shown:opacity-100 hs-tooltip-shown:visible opacity-0 transition-opacity  inline-block absolute invisible z-10 py-1 px-2 bg-white border dark:border-zinc-800 dark:bg-zinc-950 text-xs font-medium text-zinc-950 dark:text-white rounded shadow-sm" role="tooltip">
-            Hello! 👋 How are you doing? 🤔
-          </span>
+    <section id="hero" className="pb-32 pt-24 sm:pt-28 md:pt-44 relative">
+      <div className="max-w-6xl mx-auto px-4">
+        {/* Professional Badge */}
+        <div className="flex justify-center lg:justify-start mb-6">
+          <div className="inline-flex items-center px-4 py-2 bg-[#00d4ff]/10 border border-[#00d4ff]/30 rounded-full text-[#00d4ff] text-sm font-medium backdrop-blur-sm">
+            <div className="w-2 h-2 bg-[#00d4ff] rounded-full mr-2 animate-pulse"></div>
+            Available for new opportunities
+          </div>
         </div>
-        <div className="flex gap-2 align-center flex-wrap md:flex-nowrap">
-          <div className="lg:w-[80%] text-zinc-900 dark:text-zinc-100 self-center">
-            <h2 className="text-xl">{user_info.main.role}</h2>
-            <h1 className="font-black mt-3  text-[#c312e3] text-5xl lg:w-[85%]">
-              {user_info.main.name}
-            </h1>
 
-            <p className="mt-6 dark:text-zinc-300 text-base font-light lg:w-[87%] leading-7">
+        <div className="text-center lg:text-left">
+          {/* Mobile Profile Image */}
+          <div className="mb-8 lg:hidden">
+            <img
+              src={user_info.main.photo}
+              className="rounded-full w-32 h-32 mx-auto border-4 border-white/20 shadow-xl"
+              alt="Eckysaroyd Nyato - Full Stack Developer"
+            />
+          </div>
+          
+          {/* Main Content */}
+          <div className="text-white">
+            {/* Professional Introduction */}
+            <div className="mb-8">
+              <h1 className="text-5xl lg:text-7xl font-black mb-6 bg-gradient-to-r from-white via-[#00d4ff] to-white bg-clip-text text-transparent leading-tight">
+                {user_info.main.name}
+              </h1>
+              
+              <h2 className="text-xl lg:text-2xl text-[#00d4ff] mb-4 font-medium">
+                {user_info.main.role}
+              </h2>
+
+              {/* Value Proposition */}
+              <p className="text-xl lg:text-2xl text-white/95 leading-relaxed max-w-4xl mb-6 font-light">
+                Building scalable web applications that drive business growth and exceptional user experiences
+              </p>
+            </div>
+
+            {/* Key Metrics */}
+            <div className="flex flex-wrap gap-8 justify-center lg:justify-start mb-8">
+              <div className="text-center lg:text-left">
+                <div className="text-2xl font-bold text-[#00d4ff]">6+</div>
+                <div className="text-sm text-white/70">Years Experience</div>
+              </div>
+              <div className="text-center lg:text-left">
+                <div className="text-2xl font-bold text-[#00d4ff]">50+</div>
+                <div className="text-sm text-white/70">Projects Delivered</div>
+              </div>
+              <div className="text-center lg:text-left">
+                <div className="text-2xl font-bold text-[#00d4ff]">5</div>
+                <div className="text-sm text-white/70">Countries Served</div>
+              </div>
+            </div>
+
+            {/* Professional Summary */}
+            <p className="text-lg text-white/85 leading-relaxed max-w-4xl mb-10">
               {user_info.main.description}
             </p>
 
-            <div className="flex gap-2 mt-6">
+            {/* CTA Buttons */}
+            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-8">
               <a
                 href="#projects"
-                className="px-6 py-3 border border-black hover:bg-[#c312e3] hover:text-white hover:border-red-800 dark:border-white font-medium transition-all duration-300"
+                className="px-10 py-4 bg-[#00d4ff] text-black font-semibold rounded-xl hover:bg-white transition-all duration-300 hover:shadow-2xl hover:shadow-[#00d4ff]/30 transform hover:-translate-y-1 text-center"
               >
-                Projects
+                View My Work
               </a>
               <a
                 href="#contact"
-                className="px-6 py-3 hover:text-[#c312e3] dark:hover:text-[#c312e3] transition-all duration-300 flex gap-3 hover:gap-4"
+                className="px-10 py-4 border-2 border-[#00d4ff] text-[#00d4ff] font-semibold rounded-xl hover:bg-[#00d4ff] hover:text-black transition-all duration-300 flex items-center justify-center gap-2 transform hover:-translate-y-1"
               >
-                <span className="self-center font-medium">Contact</span>
-                <IoIosArrowForward className="self-center" />
+                <span>Let's Connect</span>
+                <IoIosArrowForward />
               </a>
             </div>
-          </div>
-
-          <div className="hidden lg:block w-[480px] self-center">
-            <img
-              className="rounded-[10%] transform rotate-4"
-              src={user_info.main.photo}
-              alt="sample pic"
-            />
+            
+            {/* Professional Links */}
+            <div className="flex flex-wrap gap-6 justify-center lg:justify-start text-white/70">
+              <a 
+                href={`mailto:${user_info.main.email}`} 
+                className="flex items-center gap-2 hover:text-[#00d4ff] transition-colors text-sm"
+              >
+                <span className="w-2 h-2 bg-[#00d4ff] rounded-full"></span>
+                {user_info.main.email}
+              </a>
+              <a 
+                href={user_info.socials.linkedin} 
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 hover:text-[#00d4ff] transition-colors text-sm"
+              >
+                <span className="w-2 h-2 bg-[#00d4ff] rounded-full"></span>
+                LinkedIn Profile
+              </a>
+              <a 
+                href={user_info.socials.github} 
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 hover:text-[#00d4ff] transition-colors text-sm"
+              >
+                <span className="w-2 h-2 bg-[#00d4ff] rounded-full"></span>
+                GitHub Portfolio
+              </a>
+            </div>
           </div>
         </div>
       </div>

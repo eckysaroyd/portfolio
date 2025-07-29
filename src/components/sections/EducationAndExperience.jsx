@@ -9,8 +9,8 @@ function EducationAndExperience() {
       {/* =========== EDUCATION =========== */}
       <div className="w-full md:w-[80%]">
         {/* =========== EDUCATION TITLE =========== */}
-        <h4 className="text-xl dark:text-white mb-4 font-bold flex gap-2 items-center">
-          <FaLandmark className="text-xl text-[#c312e3] dark:text-[#c312e3]" />
+        <h4 className="text-xl text-white mb-4 font-bold flex gap-2 items-center">
+          <FaLandmark className="text-xl text-[#00d4ff]" />
           Education
         </h4>
 
@@ -20,7 +20,7 @@ function EducationAndExperience() {
             <div key={index}>
               {/* =========== DURATION =========== */}
               <div className="ps-2 my-2 first:mt-0 !mt-2">
-                <h3 className="text-xs font-medium uppercase text-zinc-500 dark:text-zinc-400">
+                <h3 className="text-xs font-medium uppercase text-white/70">
                   {edu.duration}
                 </h3>
               </div>
@@ -34,12 +34,12 @@ function EducationAndExperience() {
 
                 <div className="grow p-2 pb-8">
                   {/* =========== IMAGE AND SCHOOL NAME =========== */}
-                  <h3 className="flex items-center gap-x-2 font-semibold text-zinc-800 dark:text-white">
+                  <h3 className="flex items-center gap-x-2 font-semibold text-white">
                     <img className="w-9 h-9 rounded-full" src={edu.image} alt="School Logo" />
                     <div className="leading-5">
                       {edu.school}
                       {/* =========== DEGREE =========== */}
-                      <p className="font-normal text-xs text-zinc-600 dark:text-zinc-400">
+                      <p className="font-normal text-xs text-white/70">
                         {edu.degree}
                       </p>
                     </div>
@@ -52,8 +52,8 @@ function EducationAndExperience() {
         })}
 
         {/* =========== CERTIFICATES TITLE =========== */}
-        <h4 className="text-xl dark:text-white mt-6 font-bold flex gap-2 items-center">
-          <PiCertificateFill className="text-2xl text-[#c312e3] dark:text-[#c312e3]" />
+        <h4 className="text-xl text-white mt-6 font-bold flex gap-2 items-center">
+          <PiCertificateFill className="text-2xl text-[#00d4ff]" />
           Certificates
         </h4>
 
@@ -61,7 +61,7 @@ function EducationAndExperience() {
           data-hs-carousel='{"loadingClasses": "opacity-0"}'
           className="relative mt-4"
         >
-          <div className="hs-carousel relative overflow-hidden w-full h-48 bg-white dark:bg-gray-800 rounded-lg">
+          <div className="hs-carousel relative overflow-hidden w-full h-48 bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg">
             <div className="hs-carousel-body absolute top-0 bottom-0 start-0 flex flex-nowrap transition-transform duration-700 opacity-0">
               {/* =========== CERTIFICATES LIST =========== */}
               {user_info.certificates.map((cert, index) => {
@@ -73,9 +73,9 @@ function EducationAndExperience() {
                       />
 
 
-                    <div className="flex justify-center items-center h-full bg-gray-100 p-6 dark:bg-neutral-900">
+                    <div className="flex justify-center items-center h-full bg-white/5 backdrop-blur-sm p-6">
                       <div className="hs-tooltip [--placement:bottom] inline-block">
-                        <a href={cert.link} target="_blank" rel="noreferrer" className="hs-tooltip-toggle text-center text-gray-800 dark:text-white hover:text-[#c312e3] hover:dark:text-[#c312e3]">
+                        <a href={cert.link} target="_blank" rel="noreferrer" className="hs-tooltip-toggle text-center text-white hover:text-[#00d4ff] transition-colors">
                           {/* =========== CERTIFICATE NAME =========== */}
                           <p className=" transition duration-700 px-6 font-bold">
                             {cert.title}
@@ -87,7 +87,7 @@ function EducationAndExperience() {
                         </a>
 
                         {/* =========== TOOLTIP TEXT =========== */}
-                        <span className="hs-tooltip-content hs-tooltip-shown:opacity-100 hs-tooltip-shown:visible opacity-0 transition-opacity inline-block absolute invisible z-10 py-1 px-2 bg-white border dark:border-zinc-800 dark:bg-zinc-950 text-xs font-medium dark:text-white rounded shadow-sm" role="tooltip">
+                        <span className="hs-tooltip-content hs-tooltip-shown:opacity-100 hs-tooltip-shown:visible opacity-0 transition-opacity inline-block absolute invisible z-10 py-1 px-2 bg-black/80 backdrop-blur-sm border border-white/20 text-xs font-medium text-white rounded shadow-sm" role="tooltip">
                           Open Certificate
                         </span>
                       </div>
@@ -160,8 +160,8 @@ function EducationAndExperience() {
       {/* =========== EXPERIENCE =========== */}
       <div className="w-full">
         {/* =========== EXPERIENCE TITLE =========== */}
-        <h4 className="text-xl dark:text-white mb-4 font-bold flex gap-2 items-center">
-          <FaBuildingUser className="text-2xl text-[#c312e3] dark:text-[#c312e3]" />
+        <h4 className="text-xl text-white mb-4 font-bold flex gap-2 items-center">
+          <FaBuildingUser className="text-2xl text-[#00d4ff]" />
           Experience
         </h4>
 
@@ -171,7 +171,7 @@ function EducationAndExperience() {
             return (
               <div key={index}>
                 <div className="ps-2 my-2 first:mt-0 !mt-2">
-                  <h3 className="text-xs font-medium uppercase text-zinc-500 dark:text-zinc-400">
+                  <h3 className="text-xs font-medium uppercase text-white/70">
                     {exp.duration}
                   </h3>
                 </div>
@@ -185,24 +185,24 @@ function EducationAndExperience() {
 
                   <div className="grow p-2 pb-8">
                     {/* =========== COMPANY NAME =========== */}
-                    <h3 className="flex items-center gap-x-2 font-semibold text-zinc-800 dark:text-white">
+                    <h3 className="flex items-center gap-x-2 font-semibold text-white">
                       <img className="w-9 rounded-full" src={exp.image} alt="Company Logo" />
                       <div className="leading-5">
                         {exp.company}
                         {/* =========== POSITION =========== */}
-                        <p className="font-normal text-xs text-zinc-600 dark:text-zinc-400">
+                        <p className="font-normal text-xs text-white/70">
                           {exp.position}
                         </p>
                       </div>
                     </h3>
                     
-                    <ul className="list-disc list-inside text-zinc-800 dark:text-white mt-2">
+                    <ul className="list-disc list-inside text-white/90 mt-2">
                       {/* =========== DESCRIPTION LIST =========== */}
                       {exp.descriptions.map((desc, index) => {
                         return (
                           <li className="flex space-x-3" key={index}>
                             <svg
-                              className="flex-shrink-0 size-4 mt-0.5 text-[#c312e3] dark:text-[#c312e3]"
+                              className="flex-shrink-0 size-4 mt-0.5 text-[#00d4ff]"
                               xmlns="http://www.w3.org/2000/svg"
                               width="24"
                               height="24"

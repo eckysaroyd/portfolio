@@ -25,15 +25,15 @@ function Footer({ theme }) {
         Star on Github
       </GitHubButton>
       {/* =========== USER COPYRIGHT =========== */}
-      <p className="text-zinc-600 self-center mt-2 md:mt-0 dark:text-zinc-300 text-sm text-center font-light">
+      <p className="text-white/70 self-center mt-2 md:mt-0 text-sm text-center font-light">
         {user_info.footer}
       </p>
       {/* =========== SCROLL ON TOP BUTTON =========== */}
       <button
         onClick={() => scrollToTop()}
-        className="text-zinc-600 self-center mt-2 md:mt-0 dark:text-zinc-300 mx-auto md:mx-0 text-sm font-light flex gap-2"
+        className="text-white/70 self-center mt-2 md:mt-0 mx-auto md:mx-0 text-sm font-light flex gap-2 hover:text-[#00d4ff] transition-colors"
       >
-        <FaArrowCircleUp className="self-center text-[#c312e3] dark:text-[#c312e3]" /> Go back to top
+        <FaArrowCircleUp className="self-center text-[#00d4ff]" /> Go back to top
       </button>
     </footer>
   );
