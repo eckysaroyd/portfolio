@@ -1,11 +1,10 @@
 import user_info from "../../data/user_info.js";
 import Project from "../Project.jsx";
 import ContactModal from "../ContactModal.jsx";
-import { useState, useRef } from "react";
+import { useState } from "react";
 
 function Projects() {
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const buttonRef = useRef(null);
   const featuredProjects = user_info.projects.filter(project => project.featured);
   const otherProjects = user_info.projects.filter(project => !project.featured);
 
@@ -82,7 +81,6 @@ function Projects() {
               Let's discuss how I can help bring your vision to life with cutting-edge technology and proven expertise.
             </p>
             <button
-              ref={buttonRef}
               onClick={() => setIsModalOpen(true)}
               className="inline-flex items-center px-8 py-3 bg-[#00d4ff] text-black font-semibold rounded-lg hover:bg-white transition-all duration-300 transform hover:-translate-y-1 hover:shadow-xl hover:shadow-[#00d4ff]/30"
             >
@@ -96,7 +94,6 @@ function Projects() {
       <ContactModal 
         isOpen={isModalOpen} 
         onClose={() => setIsModalOpen(false)} 
-        buttonRef={buttonRef}
       />
     </section>
   );

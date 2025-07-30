@@ -1,13 +1,12 @@
 import user_info from "../../data/user_info.js";
 import ContactModal from "../ContactModal.jsx";
-import { useState, useRef } from "react";
+import { useState } from "react";
 
 import { FaLinkedin } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
 
 function Contact() {
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const buttonRef = useRef(null);
   return (
     <section id="contact" className="py-20">
       <div className="max-w-6xl mx-auto px-4">
@@ -98,7 +97,6 @@ function Contact() {
 
               <div className="space-y-4">
                 <button
-                  ref={buttonRef}
                   onClick={() => setIsModalOpen(true)}
                   className="block w-full bg-[#00d4ff] text-black font-semibold py-4 px-6 rounded-xl hover:bg-white transition-all duration-300 transform hover:-translate-y-1 hover:shadow-xl hover:shadow-[#00d4ff]/30"
                 >
@@ -125,7 +123,6 @@ function Contact() {
       <ContactModal 
         isOpen={isModalOpen} 
         onClose={() => setIsModalOpen(false)} 
-        buttonRef={buttonRef}
       />
     </section>
   );
