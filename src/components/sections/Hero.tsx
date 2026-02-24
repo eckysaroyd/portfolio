@@ -227,7 +227,7 @@ export default function Hero() {
             </div>
 
             {/* Floating badge — left middle: experience */}
-            <div className="absolute top-1/3 -left-3 lg:-left-8 z-10 anim-fade-up"
+            <div className="absolute top-1/3 -left-6 lg:-left-14 z-10 anim-fade-up"
               style={{ animationDelay: "0.65s" }}>
               <div className="flex items-center gap-2 bg-card/90 backdrop-blur-sm border border-border
                               rounded-xl px-3 py-2 shadow-xl">
