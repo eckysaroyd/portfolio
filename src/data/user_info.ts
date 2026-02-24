@@ -77,6 +77,17 @@ const info: UserInfo = {
       featured: false,
     },
     {
+      title: "AutoOps Cloud",
+      category: "AI SaaS Platform",
+      description:
+        "Multi-tenant AI academic automation SaaS for Tanzanian private schools. Eliminates manual result compilation and report writing — admins upload an Excel file and the system auto-calculates totals, ranks students, generates Claude AI-powered personalized comments, and produces professional PDF report cards in minutes.",
+      technologies: "Next.js,TypeScript,Supabase,Tailwind CSS,Claude AI",
+      highlights: ["70% reduction in report prep time", "AI-generated student comments", "Auto ranking & grading", "Multi-school multi-tenant"],
+      github: "https://github.com/eckysaroyd",
+      link: "https://github.com/eckysaroyd",
+      featured: true,
+    },
+    {
       title: "Kasudia Herbs",
       category: "E-Commerce Platform",
       description:
