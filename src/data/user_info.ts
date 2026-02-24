@@ -44,6 +44,39 @@ const info: UserInfo = {
   // ============ PROJECTS ============
   projects: [
     {
+      title: "FastTrack Transportation",
+      category: "Transportation Platform",
+      description:
+        "Full-stack NEMT (Non-Emergency Medical Transportation) platform for FastTrack Transportation LLC — Madison, WI. Features real-time booking, wheelchair-accessible ride scheduling, Medicaid billing integration, GPS tracking, and a Supabase-powered backend serving 500+ clients monthly.",
+      technologies: "Next.js,Supabase,TypeScript,Tailwind CSS,AOS",
+      highlights: ["10,000+ trips completed", "98% on-time pickup rate", "4.9/5 from 500+ reviews", "Wheelchair-accessible booking"],
+      github: "https://github.com/eckysaroyd",
+      link: "https://www.fasttracktransportationllc.com/",
+      featured: true,
+    },
+    {
+      title: "Niccian Group Ltd",
+      category: "Business Website",
+      description:
+        "Modern business website for Tanzanian company with responsive design, service portfolios, and professional presentation — increasing client inquiries by 60%.",
+      technologies: "Laravel,HTML5,CSS3,JavaScript,Bootstrap,MySQL",
+      highlights: ["60% more inquiries", "Responsive design", "Service portfolios", "Professional presentation"],
+      github: "https://github.com/eckysaroyd",
+      link: "https://nicciangroup.shaunsoftwarehub.com/",
+      featured: false,
+    },
+    {
+      title: "Brightway Home Care",
+      category: "Healthcare Platform",
+      description:
+        "Full-stack care management platform for a licensed adult family home in Madison, WI — featuring service showcases, inquiry forms, caregiver profiles, and Supabase-powered backend for real-time data management.",
+      technologies: "Next.js,Supabase,TypeScript,Tailwind CSS",
+      highlights: ["Real-time inquiry management", "HIPAA-conscious design", "24/7 service portal", "Mobile-responsive"],
+      github: "https://github.com/eckysaroyd",
+      link: "https://brightwayhomecare.vercel.app/",
+      featured: false,
+    },
+    {
       title: "Kasudia Herbs",
       category: "E-Commerce Platform",
       description:
@@ -87,17 +120,6 @@ const info: UserInfo = {
       link: "http://mgcs.ca/",
       featured: false,
     },
-    {
-      title: "Niccian Group Ltd",
-      category: "Business Website",
-      description:
-        "Modern business website for Tanzanian company with responsive design, service portfolios, and professional presentation — increasing client inquiries by 60%.",
-      technologies: "Laravel,HTML5,CSS3,JavaScript,Bootstrap,MySQL",
-      highlights: ["60% more inquiries", "Responsive design", "Service portfolios", "Professional presentation"],
-      github: "https://github.com/eckysaroyd",
-      link: "https://nicciangroup.shaunsoftwarehub.com/",
-      featured: false,
-    },
   ],
 
   // ============ EDUCATION ============
@@ -135,7 +157,7 @@ const info: UserInfo = {
       duration: "Jul 2023 – Feb 2025",
       image: "/chandorkar.webp",
       descriptions: [
-        "Built scalable web applications and APIs used across multiple client platforms — React, Vue, Next.js, Node.js, Laravel.",
+        "Built scalable web applications and APIs used across multiple client platforms React, Vue, Next.js, Node.js, Laravel.",
         "Improved system performance by 35% and optimised database efficiency across projects.",
         "Deployed secure cloud-based solutions using Docker, AWS, and modern DevOps practices.",
       ],
@@ -176,7 +198,7 @@ const info: UserInfo = {
       duration: "Oct 2018 – Jun 2021",
       image: "/navquery.webp",
       descriptions: [
-        "Contributed to a MERN-based search engine platform — React, Node.js, Express, MongoDB.",
+        "Contributed to a MERN-based search engine platform React, Node.js, Express, MongoDB.",
         "Designed user interfaces and backend services for scalable search architecture.",
       ],
     },
@@ -186,13 +208,13 @@ const info: UserInfo = {
   certificates: [
     {
       title: "Full Stack Developer",
-      description: "React.js, Express.js and +2 skills — Issued by Board Infinity (Nov 2019)",
+      description: "React.js, Express.js and +2 skills  Issued by Board Infinity (Nov 2019)",
       icon: "/board_infinity_logo.webp",
       link: "#",
     },
     {
       title: "Software Advanced Test Development",
-      description: "Advanced QA methodologies and tools — Issued by QAMatters (Jul 2019)",
+      description: "Advanced QA methodologies and tools  Issued by QAMatters (Jul 2019)",
       icon: "/qat360_logo.webp",
       link: "#",
     },

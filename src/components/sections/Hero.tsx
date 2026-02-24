@@ -7,7 +7,7 @@ import { TypingText } from "@/components/TypingText";
 import { hexRgba } from "@/lib/utils";
 import {
   ArrowRight, Mail, Linkedin, Github,
-  Briefcase, Rocket, Bot, Sparkles, ChevronDown,
+  Briefcase, Rocket, Bot, Sparkles,
 } from "lucide-react";
 import {
   SiNextdotjs, SiTypescript, SiNodedotjs, SiReact,
@@ -43,7 +43,7 @@ const IMPACT = [
 
 export default function Hero() {
   return (
-    <section id="hero" className="relative pt-10 pb-24 sm:pt-12 sm:pb-28">
+    <section id="hero" className="relative pt-10 pb-12 sm:pt-12 sm:pb-14">
 
       {/* ── Top bar ──────────────────────────────────────────────────────── */}
       <div className="flex items-center justify-between mb-14 anim-fade-up" style={{ animationDelay: "0s" }}>
@@ -251,13 +251,8 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* ── Scroll indicator ─────────────────────────────────────────────── */}
-      <div className="flex justify-center mt-16 anim-fade-up" style={{ animationDelay: "0.8s" }}>
-        <div className="flex flex-col items-center gap-1 text-muted-foreground/30 select-none">
-          <span className="text-xs font-mono tracking-[0.2em] uppercase">Scroll</span>
-          <ChevronDown className="h-4 w-4 animate-bounce" />
-        </div>
-      </div>
+      {/* ── Section divider ──────────────────────────────────────────────── */}
+      <div className="mt-12 h-px bg-gradient-to-r from-transparent via-border to-transparent" />
 
     </section>
   );

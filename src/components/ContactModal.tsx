@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import emailjs from "@emailjs/browser";
 import {
   Dialog,
   DialogContent,
@@ -39,17 +38,11 @@ const INITIAL_FORM: FormData = {
   timeline: "",
 };
 
-const EMAILJS = {
-  publicKey:  "5TU3vEpdsLSCDy_3G",
-  serviceId:  "service_qo0ohq1",
-  mainTemplate: "template_4cgzljh",
-  autoReply:    "template_qqljtcc",
-};
-
 export function ContactModal({ isOpen, onClose }: ContactModalProps) {
-  const [form, setForm] = useState<FormData>(INITIAL_FORM);
+  const [form, setForm]           = useState<FormData>(INITIAL_FORM);
   const [submitting, setSubmitting] = useState(false);
-  const [status, setStatus] = useState<"idle" | "success" | "error">("idle");
+  const [status, setStatus]       = useState<"idle" | "success" | "error">("idle");
+  const [errorMsg, setErrorMsg]   = useState("");
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
@@ -61,41 +54,31 @@ export function ContactModal({ isOpen, onClose }: ContactModalProps) {
     e.preventDefault();
     setSubmitting(true);
     setStatus("idle");
+    setErrorMsg("");
 
     try {
-      emailjs.init(EMAILJS.publicKey);
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
+      });
 
-      const params = {
-        from_name:    form.name,
-        from_email:   form.email,
-        subject:      form.subject,
-        message:      form.message,
-        project_type: form.projectType || "Not specified",
-        budget:       form.budget || "Not specified",
-        timeline:     form.timeline || "Not specified",
-      };
+      const data = await res.json();
 
-      const res = await emailjs.send(EMAILJS.serviceId, EMAILJS.mainTemplate, params);
-
-      // Auto-reply — non-blocking failure is acceptable
-      emailjs
-        .send(EMAILJS.serviceId, EMAILJS.autoReply, {
-          from_name:  form.name,
-          from_email: form.email,
-          to_email:   form.email,
-          subject:    form.subject,
-        })
-        .catch(() => {});
-
-      if (res.status === 200) {
-        setStatus("success");
-        setTimeout(() => {
-          onClose();
-          setForm(INITIAL_FORM);
-          setStatus("idle");
-        }, 2500);
+      if (!res.ok) {
+        setErrorMsg(data.error ?? "Something went wrong.");
+        setStatus("error");
+        return;
       }
+
+      setStatus("success");
+      setTimeout(() => {
+        onClose();
+        setForm(INITIAL_FORM);
+        setStatus("idle");
+      }, 2500);
     } catch {
+      setErrorMsg("Network error — please try again.");
       setStatus("error");
     } finally {
       setSubmitting(false);
@@ -116,6 +99,7 @@ export function ContactModal({ isOpen, onClose }: ContactModalProps) {
         </DialogHeader>
 
         <form onSubmit={handleSubmit} className="space-y-5 pt-2">
+
           {/* Name + Email */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div className="space-y-1.5">
@@ -148,9 +132,11 @@ export function ContactModal({ isOpen, onClose }: ContactModalProps) {
               name="subject"
               value={form.subject}
               onChange={handleChange}
-              className="flex h-9 w-full rounded-md border border-input bg-transparent px-3 py-1 text-sm shadow-sm transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
+              className="flex h-9 w-full rounded-md border border-input bg-transparent px-3 py-1
+                         text-sm shadow-sm transition-colors focus-visible:outline-none
+                         focus-visible:ring-1 focus-visible:ring-ring"
             >
-              {["Project Inquiry","Consultation Request","Partnership Opportunity","Job Opportunity","General Question"].map(
+              {["Project Inquiry", "Consultation Request", "Partnership Opportunity", "Job Opportunity", "General Question"].map(
                 (s) => <option key={s} value={s}>{s}</option>
               )}
             </select>
@@ -181,7 +167,9 @@ export function ContactModal({ isOpen, onClose }: ContactModalProps) {
                   name={name}
                   value={form[name as keyof FormData]}
                   onChange={handleChange}
-                  className="flex h-9 w-full rounded-md border border-input bg-transparent px-3 py-1 text-sm shadow-sm transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
+                  className="flex h-9 w-full rounded-md border border-input bg-transparent px-3 py-1
+                             text-sm shadow-sm transition-colors focus-visible:outline-none
+                             focus-visible:ring-1 focus-visible:ring-ring"
                 >
                   <option value="">Select</option>
                   {options.map((o) => <option key={o} value={o}>{o}</option>)}
@@ -214,7 +202,7 @@ export function ContactModal({ isOpen, onClose }: ContactModalProps) {
           {status === "error" && (
             <div className="flex items-center gap-2 rounded-lg border border-destructive/30 bg-destructive/10 p-3 text-sm text-destructive">
               <XCircle className="h-4 w-4 flex-shrink-0" />
-              Failed to send. Please try again or email me directly.
+              {errorMsg || "Failed to send. Please try again or email me directly."}
             </div>
           )}
 
