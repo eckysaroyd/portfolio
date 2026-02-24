@@ -29,6 +29,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <ThemeProvider
           attribute="class"
           defaultTheme="light"
+          storageKey="ecky-portfolio-theme"
           disableTransitionOnChange
         >
           <Header />
