@@ -74,9 +74,9 @@ export function Header() {
             <Image
               src="/images/logo.png"
               alt={info.main.name}
-              width={36}
-              height={36}
-              className="rounded-lg object-contain
+              width={30}
+              height={30}
+              className="rounded-md object-contain
                          group-hover:opacity-90 transition-opacity duration-200"
               priority
             />

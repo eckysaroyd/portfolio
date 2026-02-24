@@ -10,7 +10,12 @@ export const metadata: Metadata = {
   description:
     "Full Stack Web Developer specializing in MERN, Laravel, Next.js, and Supabase. Building scalable web applications that drive business growth.",
   keywords: ["Full Stack Developer", "MERN", "Laravel", "Next.js", "React", "Node.js"],
-  icons: { icon: "/images/favicon.png" },
+  icons: {
+    icon: [
+      { url: "/images/logo.png", type: "image/png" },
+    ],
+    apple: "/images/logo.png",
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
