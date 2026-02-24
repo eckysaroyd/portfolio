@@ -1,0 +1,95 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background:             0 0% 100%;
+    --foreground:             222.2 84% 4.9%;
+
+    --card:                   0 0% 100%;
+    --card-foreground:        222.2 84% 4.9%;
+
+    --popover:                0 0% 100%;
+    --popover-foreground:     222.2 84% 4.9%;
+
+    --primary:                198.6 88.7% 48.4%;
+    --primary-foreground:     0 0% 100%;
+
+    --secondary:              199 89% 94%;
+    --secondary-foreground:   200 98% 20%;
+
+    --muted:                  210 40% 96.1%;
+    --muted-foreground:       215.4 16.3% 46.9%;
+
+    --accent:                 198.6 88.7% 58%;
+    --accent-foreground:      222.2 47.4% 11.2%;
+
+    --destructive:            0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border:                 214.3 31.8% 91.4%;
+    --input:                  214.3 31.8% 91.4%;
+    --ring:                   198.6 88.7% 48.4%;
+
+    --radius:                 0.75rem;
+  }
+
+  .dark {
+    --background:             224 71% 4%;
+    --foreground:             213 31% 91%;
+
+    --card:                   222.2 47.4% 7%;
+    --card-foreground:        213 31% 91%;
+
+    --popover:                222.2 47.4% 7%;
+    --popover-foreground:     213 31% 91%;
+
+    --primary:                198.6 88.7% 48.4%;
+    --primary-foreground:     0 0% 100%;
+
+    --secondary:              222.2 47.4% 11.2%;
+    --secondary-foreground:   210 40% 98%;
+
+    --muted:                  223 47% 11%;
+    --muted-foreground:       215.4 16.3% 56.9%;
+
+    --accent:                 216 34% 17%;
+    --accent-foreground:      210 40% 98%;
+
+    --destructive:            0 63% 31%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border:                 216 34% 17%;
+    --input:                  216 34% 17%;
+    --ring:                   198.6 88.7% 48.4%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* ── Staggered entrance animation ────────────────────────────────────────── */
+@keyframes fade-in-up {
+  from { opacity: 0; transform: translateY(22px); }
+  to   { opacity: 1; transform: translateY(0);    }
+}
+.anim-fade-up {
+  opacity: 0;
+  animation: fade-in-up 0.65s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* ── Typewriter cursor blink ──────────────────────────────────────────────── */
+@keyframes blink-cursor {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
+}
+.cursor-blink {
+  animation: blink-cursor 0.9s step-end infinite;
+}
