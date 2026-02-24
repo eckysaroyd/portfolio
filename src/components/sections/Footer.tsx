@@ -1,4 +1,5 @@
 import info from "@/data/user_info";
+import Image from "next/image";
 import Link from "next/link";
 import { Mail, Linkedin, Github, ArrowUp, Sparkles } from "lucide-react";
 import { SiNextdotjs, SiTailwindcss, SiTypescript } from "react-icons/si";
@@ -45,14 +46,17 @@ export default function Footer() {
 
         {/* ── Brand col (spans 2 on lg) ──────────────────────────────────── */}
         <div className="lg:col-span-2 space-y-5">
-          {/* Name + role */}
+          {/* Logo + tagline */}
           <div>
-            <p className="text-xl font-black text-foreground tracking-tight">
-              {info.main.name.split(" ")[0]}{" "}
-              <span className="text-primary">{info.main.name.split(" ")[1]}</span>
-            </p>
-            <p className="text-sm text-muted-foreground mt-1 leading-relaxed max-w-xs">
-              Senior Full-Stack &amp; AI Automation Engineer — building scalable systems
+            <Image
+              src="/images/logo.png"
+              alt={info.main.name}
+              width={320}
+              height={80}
+              className="object-contain h-16 w-auto max-w-[200px]"
+            />
+            <p className="text-sm text-muted-foreground mt-3 leading-relaxed max-w-xs">
+              Senior Full-Stack &amp; AI Automation Engineer building scalable systems
               and intelligent automation that drives real business value.
             </p>
           </div>
