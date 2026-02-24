@@ -70,7 +70,7 @@ export function Header() {
         <div className="flex items-center justify-between h-16">
 
           {/* ── Logo ──────────────────────────────────────────────────── */}
-          <a href="#hero" className="flex items-center gap-2.5 group flex-shrink-0">
+          <a href="#hero" className="group flex-shrink-0">
             <Image
               src="/images/logo.png"
               alt={info.main.name}
@@ -80,14 +80,6 @@ export function Header() {
                          group-hover:opacity-90 transition-opacity duration-200"
               priority
             />
-            <div className="hidden sm:block leading-none">
-              <span className="text-sm font-bold text-foreground">
-                {info.main.name.split(" ")[0]}
-              </span>{" "}
-              <span className="text-sm font-bold text-primary">
-                {info.main.name.split(" ")[1]}
-              </span>
-            </div>
           </a>
 
           {/* ── Desktop nav ───────────────────────────────────────────── */}
