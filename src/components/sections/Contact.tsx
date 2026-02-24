@@ -37,7 +37,7 @@ const CONTACT_LINKS = [
 ];
 
 const STATS = [
-  { value: "< 24h", label: "Response time" },
+  { value: "24/7",  label: "Response time" },
   { value: "15+",   label: "Projects shipped" },
   { value: "6+",    label: "Years experience" },
 ];
