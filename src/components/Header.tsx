@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import info from "@/data/user_info";
 import { ThemeToggle } from "@/components/ThemeToggle";
 import { Github, Linkedin, Menu, X } from "lucide-react";
@@ -70,13 +71,15 @@ export function Header() {
 
           {/* ── Logo ──────────────────────────────────────────────────── */}
           <a href="#hero" className="flex items-center gap-2.5 group flex-shrink-0">
-            <div className="w-8 h-8 rounded-lg bg-primary text-primary-foreground
-                            flex items-center justify-center text-xs font-black tracking-tight
-                            shadow-[0_2px_8px_hsl(var(--primary)/0.4)]
-                            group-hover:shadow-[0_4px_16px_hsl(var(--primary)/0.5)]
-                            transition-shadow duration-200">
-              EN
-            </div>
+            <Image
+              src="/images/logo.png"
+              alt={info.main.name}
+              width={36}
+              height={36}
+              className="rounded-lg object-contain
+                         group-hover:opacity-90 transition-opacity duration-200"
+              priority
+            />
             <div className="hidden sm:block leading-none">
               <span className="text-sm font-bold text-foreground">
                 {info.main.name.split(" ")[0]}
