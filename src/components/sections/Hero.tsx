@@ -2,11 +2,10 @@ import info from "@/data/user_info";
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { ThemeToggle } from "@/components/ThemeToggle";
 import { TypingText } from "@/components/TypingText";
 import { hexRgba } from "@/lib/utils";
 import {
-  ArrowRight, Mail, Linkedin, Github,
+  ArrowRight, Mail,
   Briefcase, Rocket, Bot, Sparkles,
 } from "lucide-react";
 import {
@@ -44,24 +43,6 @@ const IMPACT = [
 export default function Hero() {
   return (
     <section id="hero" className="relative pt-10 pb-12 sm:pt-12 sm:pb-14">
-
-      {/* ── Top bar ──────────────────────────────────────────────────────── */}
-      <div className="flex items-center justify-between mb-14 anim-fade-up" style={{ animationDelay: "0s" }}>
-        <span className="text-sm font-mono text-muted-foreground tracking-widest uppercase">
-          Portfolio
-        </span>
-        <div className="flex items-center gap-3">
-          <Link href={info.socials.github} target="_blank" rel="noopener noreferrer"
-            aria-label="GitHub" className="text-muted-foreground hover:text-foreground transition-colors">
-            <Github className="h-5 w-5" />
-          </Link>
-          <Link href={info.socials.linkedin} target="_blank" rel="noopener noreferrer"
-            aria-label="LinkedIn" className="text-muted-foreground hover:text-foreground transition-colors">
-            <Linkedin className="h-5 w-5" />
-          </Link>
-          <ThemeToggle />
-        </div>
-      </div>
 
       {/* ── Status badge ─────────────────────────────────────────────────── */}
       <div className="inline-flex mb-7 anim-fade-up" style={{ animationDelay: "0.1s" }}>

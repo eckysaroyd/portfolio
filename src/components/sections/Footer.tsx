@@ -1,6 +1,9 @@
 import info from "@/data/user_info";
 import Link from "next/link";
 import { Mail, Linkedin, Github, ArrowUp, Sparkles } from "lucide-react";
+import { SiNextdotjs, SiTailwindcss, SiTypescript } from "react-icons/si";
+import { hexRgba } from "@/lib/utils";
+import type { IconType } from "react-icons";
 
 // ── Data ───────────────────────────────────────────────────────────────────
 const NAV_LINKS = [
@@ -17,7 +20,11 @@ const SOCIAL_LINKS = [
   { icon: Github,   label: "GitHub",   value: "github.com/eckysaroyd",   href: info.socials.github,           color: "#8b5cf6" },
 ];
 
-const BUILT_WITH = ["Next.js", "TailwindCSS", "TypeScript", "shadcn/ui"];
+const BUILT_WITH: { name: string; icon: IconType; color: string }[] = [
+  { name: "Next.js",     icon: SiNextdotjs,   color: "#94a3b8" },
+  { name: "TailwindCSS", icon: SiTailwindcss,  color: "#06b6d4" },
+  { name: "TypeScript",  icon: SiTypescript,   color: "#3178c6" },
+];
 
 // ── Component ──────────────────────────────────────────────────────────────
 export default function Footer() {
@@ -65,14 +72,21 @@ export default function Footer() {
             <p className="text-xs font-mono text-muted-foreground/60 uppercase tracking-widest">
               Built with
             </p>
-            <div className="flex flex-wrap gap-1.5">
-              {BUILT_WITH.map((tech) => (
+            <div className="flex flex-wrap gap-2">
+              {BUILT_WITH.map(({ name, icon: Icon, color }) => (
                 <span
-                  key={tech}
-                  className="text-xs font-mono px-2.5 py-1 rounded-full border border-border
-                             bg-muted/50 text-muted-foreground"
+                  key={name}
+                  className="inline-flex items-center gap-1.5 text-xs font-medium px-2.5 py-1
+                             rounded-lg border cursor-default transition-all duration-200
+                             hover:brightness-125 hover:scale-105 select-none"
+                  style={{
+                    backgroundColor: hexRgba(color, 0.08),
+                    borderColor:     hexRgba(color, 0.28),
+                    color:           hexRgba(color, 0.9),
+                  }}
                 >
-                  {tech}
+                  <Icon className="h-3 w-3 flex-shrink-0" style={{ color }} />
+                  {name}
                 </span>
               ))}
             </div>

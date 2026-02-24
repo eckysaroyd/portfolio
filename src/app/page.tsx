@@ -7,7 +7,7 @@ import Footer from "@/components/sections/Footer";
 
 export default function HomePage() {
   return (
-    <main className="min-h-screen bg-background">
+    <main className="min-h-screen bg-background pt-16">
       {/* Ambient background glow — purely decorative */}
       <div aria-hidden="true" className="fixed inset-0 overflow-hidden pointer-events-none">
         <div className="absolute -top-40 -right-40 w-[700px] h-[700px] rounded-full bg-primary/5 blur-3xl" />
