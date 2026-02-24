@@ -9,7 +9,7 @@ const info: UserInfo = {
       "Senior Full-Stack and AI Automation Engineer with 6+ years of experience building scalable web platforms, automation systems, and AI-powered applications. I specialize in modern JavaScript ecosystems, cloud-ready architectures, and intelligent automation using LLMs  helping teams ship faster with production-grade systems.",
     summary:
       "I have designed and delivered everything from SaaS dashboards and multi-tenant platforms to AI workflow bots powered by Playwright and LLM integrations. My engineering approach combines clean architecture, automation-first thinking, and strong business awareness.",
-    photo: "/ecky.jpg",
+    photo: "/images/ecky.jpg",
     email: "enyato98@gmail.com",
   },
 
@@ -128,13 +128,13 @@ const info: UserInfo = {
       school: "Punjabi University / India, Punjab",
       degree: "Master of Computer Applications (MCA)",
       duration: "2022 - 2024",
-      image: "/punjabiuniverysity.webp",
+      image: "/images/punjabiuniverysity.webp",
     },
     {
       school: "Lovely Professional University / India, Punjab",
       degree: "Bachelor of Computer Applications (BCA)",
       duration: "2017 - 2020",
-      image: "/lpu.webp",
+      image: "/images/lpu.webp",
     },
   ],
 
@@ -144,7 +144,7 @@ const info: UserInfo = {
       position: "Software Engineer",
       company: "Shaun Software Hub | India",
       duration: "Feb 2025 – Present",
-      image: "/shaunsoftwarehub.png",
+      image: "/images/shaunsoftwarehub.png",
       descriptions: [
         "Designing and deploying scalable full-stack applications for client and internal products.",
         "Building AI-powered automation systems to streamline business workflows using LLMs and Playwright.",
@@ -155,7 +155,7 @@ const info: UserInfo = {
       position: "Software Developer",
       company: "Chandorkar Technologies OPC Pvt. Ltd | India, Pune",
       duration: "Jul 2023 – Feb 2025",
-      image: "/chandorkar.webp",
+      image: "/images/chandorkar.webp",
       descriptions: [
         "Built scalable web applications and APIs used across multiple client platforms React, Vue, Next.js, Node.js, Laravel.",
         "Improved system performance by 35% and optimised database efficiency across projects.",
@@ -166,7 +166,7 @@ const info: UserInfo = {
       position: "Senior Software Developer",
       company: "TaScript | India, Patiala",
       duration: "Jun 2022 – Jun 2023",
-      image: "/tascript.webp",
+      image: "/images/tascript.webp",
       descriptions: [
         "Led frontend and backend development for mobile and web platforms with Laravel, Node.js, React, and Vue.",
         "Optimised deployment pipelines and improved system stability across production environments.",
@@ -176,7 +176,7 @@ const info: UserInfo = {
       position: "Full-Stack Developer (Part-time)",
       company: "InIndia | India, Bengaluru",
       duration: "Mar 2022 – Dec 2022",
-      image: "/inindia_logo.webp",
+      image: "/images/inindia_logo.webp",
       descriptions: [
         "Designed and developed an employee management system using Laravel, MySQL, and JWT authentication.",
         "Delivered a secure, production-ready system for internal operations.",
@@ -186,7 +186,7 @@ const info: UserInfo = {
       position: "PHP Web Developer",
       company: "Protolabz eServices | India, Phagwara",
       duration: "Oct 2021 – Jul 2022",
-      image: "/protolabz_eservices_logo.webp",
+      image: "/images/protolabz_eservices_logo.webp",
       descriptions: [
         "Built and maintained CMS and eCommerce platforms using PHP, Laravel, WordPress, and Shopify.",
         "Improved performance, modernised UI components, and delivered backend API integrations.",
@@ -196,7 +196,7 @@ const info: UserInfo = {
       position: "Full-Stack Developer",
       company: "navQuery | Tanzania, Dar es Salaam",
       duration: "Oct 2018 – Jun 2021",
-      image: "/navquery.webp",
+      image: "/images/navquery.webp",
       descriptions: [
         "Contributed to a MERN-based search engine platform React, Node.js, Express, MongoDB.",
         "Designed user interfaces and backend services for scalable search architecture.",
@@ -209,13 +209,13 @@ const info: UserInfo = {
     {
       title: "Full Stack Developer",
       description: "React.js, Express.js and +2 skills  Issued by Board Infinity (Nov 2019)",
-      icon: "/board_infinity_logo.webp",
+      icon: "/images/board_infinity_logo.webp",
       link: "#",
     },
     {
       title: "Software Advanced Test Development",
       description: "Advanced QA methodologies and tools  Issued by QAMatters (Jul 2019)",
-      icon: "/qat360_logo.webp",
+      icon: "/images/qat360_logo.webp",
       link: "#",
     },
   ],
