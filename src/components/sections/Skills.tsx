@@ -1,3 +1,5 @@
+"use client";
+
 import info from "@/data/user_info";
 import { hexRgba } from "@/lib/utils";
 import {
