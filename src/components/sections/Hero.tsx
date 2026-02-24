@@ -210,7 +210,7 @@ export default function Hero() {
             {/* Floating badge — left middle: experience */}
             <div className="absolute top-1/3 -left-6 lg:-left-14 z-10 anim-fade-up"
               style={{ animationDelay: "0.65s" }}>
-              <div className="flex items-center gap-2 bg-card/90 backdrop-blur-sm border border-border
+              <div className="-ml-[34px] lg:ml-0 flex items-center gap-2 bg-card/90 backdrop-blur-sm border border-border
                               rounded-xl px-3 py-2 shadow-xl">
                 <div className="h-6 w-6 rounded-lg bg-amber-500/15 flex items-center justify-center flex-shrink-0">
                   <Sparkles className="h-3.5 w-3.5 text-amber-400" />
