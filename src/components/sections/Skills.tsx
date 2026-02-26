@@ -4,7 +4,7 @@ import info from "@/data/user_info";
 import { hexRgba } from "@/lib/utils";
 import {
   SiNextdotjs, SiReact, SiVuedotjs, SiTypescript, SiJavascript,
-  SiTailwindcss, SiBootstrap,
+  SiTailwindcss, SiBootstrap, SiVite,
   SiNodedotjs, SiExpress, SiLaravel, SiPhp, SiCodeigniter,
   SiPostgresql, SiSupabase, SiMysql, SiMongodb,
   SiDocker, SiGithubactions, SiGitlab, SiLinux,
@@ -13,7 +13,7 @@ import {
 import {
   Bot, BrainCircuit, Code2, Cpu, Zap, Workflow, Shield,
   Server, GitBranch, Globe, Layers, Cloud, Palette,
-  FlaskConical, Monitor, Database, Play, Sparkles,
+  FlaskConical, Monitor, Database, Play, Sparkles, Gamepad2,
 } from "lucide-react";
 
 // ── Types ──────────────────────────────────────────────────────────────────
@@ -39,6 +39,8 @@ const SKILL_MAP: Record<string, { Icon: AnyIcon; color: string }> = {
   "JavaScript":         { Icon: SiJavascript as AnyIcon,     color: "#f7df1e" },
   "Tailwind CSS":       { Icon: SiTailwindcss as AnyIcon,    color: "#06b6d4" },
   "Bootstrap":          { Icon: SiBootstrap as AnyIcon,      color: "#7952b3" },
+  "Phaser 3":           { Icon: Gamepad2,                    color: "#4a90d9" },
+  "Vite":               { Icon: SiVite as AnyIcon,           color: "#646cff" },
   "Node.js":            { Icon: SiNodedotjs as AnyIcon,      color: "#339933" },
   "Express.js":         { Icon: SiExpress as AnyIcon,        color: "#94a3b8" },
   "Laravel":            { Icon: SiLaravel as AnyIcon,        color: "#ff2d20" },

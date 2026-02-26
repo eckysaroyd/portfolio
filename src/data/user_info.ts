@@ -33,7 +33,7 @@ const info: UserInfo = {
       "n8n",
       "Supabase Vector",
     ],
-    frontend: ["Next.js", "React.js", "Vue.js", "TypeScript", "JavaScript", "Tailwind CSS", "Bootstrap"],
+    frontend: ["Next.js", "React.js", "Vue.js", "TypeScript", "JavaScript", "Tailwind CSS", "Bootstrap", "Phaser 3", "Vite"],
     backend: ["Node.js", "Express.js", "Laravel", "PHP", "REST APIs", "Microservices", "CodeIgniter"],
     databases: ["PostgreSQL", "Supabase", "MySQL", "MongoDB"],
     devops: ["AWS", "Docker", "CI/CD", "GitHub Actions", "GitLab", "Coolify", "Linux"],
@@ -73,7 +73,7 @@ const info: UserInfo = {
       technologies: "Laravel,HTML5,CSS3,JavaScript,Bootstrap,MySQL",
       highlights: ["60% more inquiries", "Responsive design", "Service portfolios", "Professional presentation"],
       github: "https://github.com/eckysaroyd",
-      link: "https://nicciangroup.shaunsoftwarehub.com/",
+      link: "https://nicciangroup.co.tz/",
       featured: false,
     },
     {
@@ -85,6 +85,17 @@ const info: UserInfo = {
       highlights: ["Real-time inquiry management", "HIPAA-conscious design", "24/7 service portal", "Mobile-responsive"],
       github: "https://github.com/eckysaroyd",
       link: "https://brightwayhomecare.vercel.app/",
+      featured: false,
+    },
+    {
+      title: "Shaun Racing",
+      category: "Browser Game",
+      description:
+        "Shaun Racing is a fully browser-native, WebGL-powered car-dodging game engineered from the ground up with Phaser 3 — one of the most respected HTML5 game frameworks in the industry. Players choose from 4 premium vehicles (BMW, Ford, Lamborghini, Pagani) and race across 6 distinct environments (Canyon, City, Desert, Prairie, Icefield, Bridge), surviving an ever-escalating difficulty curve where obstacles spawn faster and top speed ramps every 10 seconds. The architecture spans 7 dedicated Phaser scenes with clean separation of concerns — PreloadScene, MenuScene, OptionScene, GameScene, ResultScene, HelpScene, and AboutScene — demonstrating the same modular engineering discipline applied to full-stack production systems. A custom sprite-numeral HUD, localStorage-persisted high scores, smooth lane-tween animations, and Phaser's FIT scale mode deliver a polished, fully responsive experience across all devices. The entire project is end-to-end tested with Playwright across all 24 car × road combination matrices and 800 m endurance runs, and deployed to Vercel via a Vite-optimised production build. Shaun Racing proves that serious, well-architected game engineering is fully achievable within the modern JavaScript ecosystem.",
+      technologies: "Phaser 3,Vite,JavaScript,Playwright",
+      highlights: ["4 cars × 6 environments", "WebGL/Canvas rendering", "Playwright E2E tested", "Responsive on any screen"],
+      github: "https://github.com/eckysaroyd/cargame",
+      link: "https://shauncargame.vercel.app/",
       featured: false,
     },
     {
@@ -106,7 +117,7 @@ const info: UserInfo = {
       technologies: "Laravel,Vue.js,Tailwind CSS,JavaScript,MySQL",
       highlights: ["40% efficiency increase", "Real-time tracking", "Mobile-responsive", "Automated scheduling"],
       github: "https://github.com/eckysaroyd",
-      link: "https://products.shaunsoftwarehub.com/",
+      link: "https://wowlaundry.in/",
       featured: true,
     },
     {
