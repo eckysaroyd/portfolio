@@ -44,14 +44,14 @@ const info: UserInfo = {
   // ============ PROJECTS ============
   projects: [
     {
-      title: "AutoOps Cloud",
+      title: "AutoOps Schools",
       category: "AI SaaS Platform",
       description:
-        "AutoOps Cloud is a production-ready, multi-tenant AI SaaS platform engineered to eliminate the most time-consuming burden in Tanzanian private schools: academic result processing. What once consumed days of manual spreadsheet work now takes minutes administrators upload a single Excel file and the system automatically calculates scores, applies grade boundaries, ranks every student by class and stream, and leverages Claude AI to generate uniquely personalized, curriculum-aligned report comments for each pupil. Professional PDF report cards are rendered and ready for print or digital distribution in under five minutes. Built on a robust multi-tenant architecture with role-based access control, school-level data isolation, and Supabase real-time infrastructure, AutoOps Cloud is the scalable academic automation solution built for Africa's growing private education sector.",
-      technologies: "Next.js,TypeScript,Supabase,Tailwind CSS,Claude AI",
-      highlights: ["70% reduction in report prep time", "AI-generated student comments", "Auto ranking & grading", "Multi-school multi-tenant"],
+        "AutoOps Schools is a production-ready, multi-tenant AI SaaS platform purpose-built for Tanzanian primary and secondary schools — turning days of manual academic reporting work into minutes. Administrators upload a single Excel file and the system automatically validates data, calculates scores, applies Tanzania's standard grading boundaries (primary A–E, secondary O-Level divisions), and ranks every student by position within their class. Claude AI then generates uniquely personalized, curriculum-aligned report comments for each pupil based on their individual subject strengths and weaknesses. Professional branded PDF report cards — complete with school logo, full subject table, total/average/position, AI comment, and headteacher signature fields — are produced and ready for print or digital distribution in under five minutes. Built on Supabase with row-level security for strict school-level data isolation, role-based access control (admin/teacher), and AI comment caching to control API costs, AutoOps Schools is the focused academic automation system engineered for Africa's growing private education sector.",
+      technologies: "Next.js,TypeScript,Supabase,Claude AI,pdf-lib",
+      highlights: ["Report cards ready in under 5 minutes", "Claude AI personalized comments per pupil", "Auto grade, rank & O-Level division calculation", "Multi-tenant with Supabase RLS school isolation"],
       github: "https://github.com/eckysaroyd",
-      link: "https://github.com/eckysaroyd",
+      link: "https://tz-schools-auto-ops-cloud.vercel.app/",
       featured: true,
     },
     {
