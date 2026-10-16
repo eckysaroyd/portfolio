@@ -10,10 +10,10 @@ import { Github, Linkedin, Menu, X, Download } from "lucide-react";
 const NAV = [
   { label: "Home",       href: "/#hero",      id: "hero"       },
   { label: "About",      href: "/about",       id: "about"      },
-  { label: "Projects",   href: "/#projects",  id: "projects"   },
-  { label: "Experience", href: "/#experience",id: "experience" },
-  { label: "Skills",     href: "/#skills",    id: "skills"     },
-  { label: "Contact",    href: "/#contact",   id: "contact"    },
+  { label: "Projects",   href: "/projects",   id: "projects"   },
+  { label: "Experience", href: "/experience",  id: "experience" },
+  { label: "Skills",     href: "/skills",     id: "skills"     },
+  { label: "Contact",    href: "/contact",    id: "contact"    },
 ];
 
 const SOCIALS = [
@@ -27,9 +27,13 @@ export function Header() {
   const [active,    setActive]    = useState("hero");
   const [menuOpen,  setMenuOpen]  = useState(false);
 
-  // On /about page, always mark "about" as active
+  // Set active nav item for dedicated route pages
   useEffect(() => {
-    if (pathname === "/about") setActive("about");
+    if (pathname === "/about")      setActive("about");
+    else if (pathname === "/projects")  setActive("projects");
+    else if (pathname === "/experience") setActive("experience");
+    else if (pathname === "/skills")    setActive("skills");
+    else if (pathname === "/contact")   setActive("contact");
     else setActive("hero");
   }, [pathname]);
 

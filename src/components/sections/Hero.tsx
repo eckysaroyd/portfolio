@@ -67,7 +67,7 @@ export default function Hero() {
           {/* CTAs */}
           <div className="flex flex-col sm:flex-row gap-3 pt-1">
             <Link
-              href="#projects"
+              href="/projects"
               className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-primary text-white
                          font-semibold rounded-xl shadow-lg shadow-primary/30
                          hover:bg-primary/90 hover:-translate-y-0.5 transition-all duration-200 text-sm"
