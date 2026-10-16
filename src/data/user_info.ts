@@ -4,13 +4,15 @@ const info: UserInfo = {
   // ============ MAIN DETAILS ============
   main: {
     name: "Eckysaroyd Nyato",
-    role: "Senior Full-Stack & AI Automation Engineer | Next.js · Node.js · LLM Integrations · Scalable SaaS Architect",
+    role: "Head of Engineering · Full-Stack & AI Engineer",
     description:
       "Senior Full-Stack and AI Automation Engineer with 6+ years of proven experience designing, building, and deploying production-grade systems that solve real business problems at scale. I specialize in modern JavaScript ecosystems — Next.js, Node.js, TypeScript — cloud-native architectures, and intelligent automation powered by large language models. From multi-tenant SaaS platforms and AI-driven workflow engines to high-traffic eCommerce and healthcare portals, I help organizations ship faster, operate smarter, and scale confidently.",
     summary:
       "I architect and deliver complete digital solutions — from multi-tenant SaaS dashboards and AI workflow automation to enterprise eCommerce platforms and mission-critical healthcare portals. Every system I build is engineered with clean architecture, performance-first thinking, and a clear focus on measurable business outcomes. If you need a technical partner who understands both the code and the business impact it creates, let's build something exceptional together.",
     photo: "/images/ecky.jpg",
     email: "enyato98@gmail.com",
+    location: "Tanzania / Remote",
+    availability: "Available for new projects",
   },
 
   // ============ SOCIAL LINKS ============
@@ -53,6 +55,7 @@ const info: UserInfo = {
       github: "https://github.com/faanooleproperties/faanoole_properties",
       link: "https://faanooleapartments.com/",
       featured: true,
+      screenshot: "/images/projects/faanoole.png",
     },
     {
       title: "Somali Fuel Company",
@@ -64,6 +67,7 @@ const info: UserInfo = {
       github: "https://github.com/JoyUnityInnovations/somali-fuel-company",
       link: "https://www.somalifuelcompany.com/login",
       featured: false,
+      screenshot: "/images/projects/somali-fuel.png",
     },
     {
       title: "Ruach Coffee",
@@ -75,6 +79,7 @@ const info: UserInfo = {
       github: "https://github.com/shaunSoftwareHub/ruach-coffee",
       link: "https://ruachpremium.com/",
       featured: false,
+      screenshot: "/images/projects/ruach-coffee.png",
     },
     {
       title: "AutoOps Schools",
@@ -86,6 +91,7 @@ const info: UserInfo = {
       github: "https://github.com/eckysaroyd",
       link: "https://tz-schools-auto-ops-cloud.vercel.app/",
       featured: true,
+      screenshot: "/images/projects/autoops-schools.png",
     },
     {
       title: "FastTrack Transportation",
@@ -97,6 +103,7 @@ const info: UserInfo = {
       github: "https://github.com/eckysaroyd",
       link: "https://www.fasttracktransportationllc.com/",
       featured: true,
+      screenshot: "/images/projects/fasttrack.png",
     },
     {
       title: "Niccian Group Ltd",
@@ -108,6 +115,7 @@ const info: UserInfo = {
       github: "https://github.com/eckysaroyd",
       link: "https://nicciangroup.co.tz/",
       featured: false,
+      screenshot: "/images/projects/niccian-group.png",
     },
     {
       title: "Brightway Home Care",
@@ -119,6 +127,7 @@ const info: UserInfo = {
       github: "https://github.com/eckysaroyd",
       link: "https://www.brightwayhomecarellc.com/",
       featured: false,
+      screenshot: "/images/projects/brightway.png",
     },
     {
       title: "Shaun Racing",
@@ -130,17 +139,7 @@ const info: UserInfo = {
       github: "https://github.com/eckysaroyd/cargame",
       link: "https://shauncargame.vercel.app/",
       featured: false,
-    },
-    {
-      title: "Kasudia Herbs",
-      category: "E-Commerce Platform",
-      description:
-        "Kasudia Herbs is a fully custom-engineered, enterprise-grade eCommerce platform serving 10,000+ customers built to compete at scale without compromise on performance, reliability, or user experience. The Laravel backend drives comprehensive inventory management, dynamic product categorization, promotional pricing, and order lifecycle tracking, while the Vue.js storefront delivers a fast, intuitive shopping experience across all devices. Deployed via Docker and Coolify for containerized, zero-downtime production releases, the platform sustains 99.9% uptime with 30% faster page load times than its predecessor. This is not an off-the-shelf solution it is a custom-engineered retail engine designed to grow with the business and built to handle the demands of a serious eCommerce operation.",
-      technologies: "Laravel,MySQL,Vue.js,Coolify,Docker,Tailwind CSS",
-      highlights: ["10,000+ active users", "99.9% uptime", "30% faster load times", "Secure payment processing"],
-      github: "https://github.com/eckysaroyd",
-      link: "http://kasudia.com/",
-      featured: true,
+      screenshot: "/images/projects/shaun-racing.png",
     },
   ],
 
@@ -273,7 +272,26 @@ const info: UserInfo = {
   },
 
   // ============ FOOTER ============
-  footer: "© 2025 Eckysaroyd Nyato. All Rights Reserved.",
+  footer: "© 2026 Eckysaroyd Nyato. All Rights Reserved.",
+
+  // ============ ABOUT ============
+  about: {
+    title: "About Me",
+    highlight: "Senior Full-Stack & AI Automation Engineer",
+    body: "I'm a Senior Full-Stack and AI Automation Engineer with 6+ years of proven experience designing, building, and deploying production-grade systems that solve real business problems at scale. I specialize in modern JavaScript ecosystems — Next.js, Node.js, TypeScript — cloud-native architectures, and intelligent automation powered by large language models.",
+    quote: "I don't just write code — I build systems that create measurable business impact.",
+    traits: ["Problem Solver", "Systems Thinker", "AI-First Engineer", "Clean Code Advocate"],
+  },
+
+  // ============ SERVICES ============
+  services: [
+    "Full-Stack Web Development",
+    "AI & LLM Integration",
+    "SaaS Platform Architecture",
+    "API Design & Development",
+    "Database Design & Optimization",
+    "Cloud Deployment & DevOps",
+  ],
 };
 
 export default info;

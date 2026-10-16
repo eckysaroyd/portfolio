@@ -5,6 +5,7 @@ import { ExternalLink, CheckCircle2, Sparkles, Globe, Server, Zap, BookOpen, Bot
 import { hexRgba } from "@/lib/utils";
 import type { Project } from "@/types";
 import Link from "next/link";
+import Image from "next/image";
 import { ProjectModal } from "@/components/ProjectModal";
 import {
   SiLaravel, SiMysql, SiVuedotjs, SiDocker, SiTailwindcss,
@@ -81,31 +82,50 @@ export function ProjectCard({ project }: { project: Project }) {
                    hover:border-primary/40 hover:-translate-y-1.5
                    hover:shadow-[0_16px_48px_hsl(var(--primary)/0.14)]"
       >
-        {/* ── Top accent ──────────────────────────────────────────────── */}
-        <div className="relative h-24 flex-shrink-0 overflow-hidden
-                        bg-gradient-to-br from-primary/10 via-primary/5 to-transparent">
-          <div
-            aria-hidden
-            className="absolute inset-0"
-            style={{
-              backgroundImage: "radial-gradient(circle at 1.5px 1.5px, hsl(var(--primary) / 0.18) 1px, transparent 0)",
-              backgroundSize: "22px 22px",
-            }}
-          />
-          <span className="absolute bottom-3 left-4 text-xs font-mono font-semibold
-                           text-foreground/75 tracking-wider uppercase">
+        {/* ── Screenshot / accent ─────────────────────────────────────── */}
+        <div className="relative h-44 flex-shrink-0 overflow-hidden bg-muted">
+          {project.screenshot ? (
+            <Image
+              src={project.screenshot}
+              alt={`${project.title} screenshot`}
+              fill
+              className="object-cover object-top group-hover:scale-105 transition-transform duration-500"
+            />
+          ) : (
+            <>
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-primary/5 to-transparent" />
+              <div
+                aria-hidden
+                className="absolute inset-0"
+                style={{
+                  backgroundImage: "radial-gradient(circle at 1.5px 1.5px, hsl(var(--primary) / 0.18) 1px, transparent 0)",
+                  backgroundSize: "22px 22px",
+                }}
+              />
+            </>
+          )}
+          {/* Overlay gradient for text legibility */}
+          <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
+
+          {/* Category badge */}
+          <span className="absolute bottom-3 left-3 text-xs font-semibold px-2.5 py-1 rounded-full
+                           bg-white/90 dark:bg-black/70 text-foreground backdrop-blur-sm border border-border/50">
             {project.category}
           </span>
-          {project.featured && (
-            <span className="absolute top-3 right-3 inline-flex items-center gap-1.5
-                             text-xs font-semibold tracking-wide px-2.5 py-1 rounded-full border
-                             text-primary bg-primary/10 border-primary/30 backdrop-blur-sm">
-              <Sparkles className="h-2.5 w-2.5" />
-              Featured
-            </span>
-          )}
-          <div className="absolute inset-x-0 bottom-0 h-px
-                          bg-gradient-to-r from-primary/40 via-primary/20 to-transparent" />
+
+          {/* Arrow link */}
+          <Link
+            href={project.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="absolute top-3 right-3 w-8 h-8 rounded-full bg-primary text-white
+                       flex items-center justify-center opacity-0 group-hover:opacity-100
+                       translate-y-1 group-hover:translate-y-0 transition-all duration-200
+                       shadow-lg hover:bg-primary/90"
+            aria-label={`Open ${project.title}`}
+          >
+            <ExternalLink className="h-3.5 w-3.5" />
+          </Link>
         </div>
 
         {/* ── Body ────────────────────────────────────────────────────── */}

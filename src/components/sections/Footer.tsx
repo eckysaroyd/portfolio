@@ -1,117 +1,72 @@
 import info from "@/data/user_info";
-import Image from "next/image";
 import Link from "next/link";
-import { Mail, Linkedin, Github, ArrowUp, Sparkles } from "lucide-react";
-import { SiNextdotjs, SiTailwindcss, SiTypescript } from "react-icons/si";
-import { hexRgba } from "@/lib/utils";
-import type { IconType } from "react-icons";
+import { Mail, Linkedin, Github, ArrowUp } from "lucide-react";
 
-// ── Data ───────────────────────────────────────────────────────────────────
-const NAV_LINKS = [
+const QUICK_LINKS = [
   { label: "Home",       href: "#hero"       },
+  { label: "About",      href: "#about"      },
   { label: "Projects",   href: "#projects"   },
-  { label: "Skills",     href: "#skills"     },
   { label: "Experience", href: "#experience" },
+  { label: "Skills",     href: "#skills"     },
   { label: "Contact",    href: "#contact"    },
 ];
 
-const SOCIAL_LINKS = [
-  { icon: Mail,     label: "Email",    value: info.main.email,           href: `mailto:${info.main.email}`, color: "#0ea5e9" },
-  { icon: Linkedin, label: "LinkedIn", value: "linkedin.com/in/eckysaroyd", href: info.socials.linkedin,       color: "#0a66c2" },
-  { icon: Github,   label: "GitHub",   value: "github.com/eckysaroyd",   href: info.socials.github,           color: "#8b5cf6" },
+const SOCIALS = [
+  { icon: Mail,     label: "Email",    href: `mailto:${info.main.email}` },
+  { icon: Linkedin, label: "LinkedIn", href: info.socials.linkedin       },
+  { icon: Github,   label: "GitHub",   href: info.socials.github         },
 ];
 
-const BUILT_WITH: { name: string; icon: IconType; color: string }[] = [
-  { name: "Next.js",     icon: SiNextdotjs,   color: "#94a3b8" },
-  { name: "TailwindCSS", icon: SiTailwindcss,  color: "#06b6d4" },
-  { name: "TypeScript",  icon: SiTypescript,   color: "#3178c6" },
-];
-
-// ── Component ──────────────────────────────────────────────────────────────
 export default function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="relative mt-8 overflow-hidden">
+    <footer className="relative border-t border-border pt-12 pb-8 overflow-hidden">
 
-      {/* Top gradient divider */}
-      <div className="h-px bg-gradient-to-r from-transparent via-primary/40 to-transparent mb-12" />
-
-      {/* Ambient glow */}
       <div aria-hidden className="pointer-events-none absolute bottom-0 left-1/2 -translate-x-1/2
-                                  w-[600px] h-48 bg-primary/5 blur-3xl rounded-full" />
+                                   w-[600px] h-40 bg-primary/5 blur-3xl rounded-full" />
 
-      {/* ── Main grid ─────────────────────────────────────────────────────── */}
-      <div className="relative grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 pb-10">
+      {/* Main grid */}
+      <div className="relative grid grid-cols-1 sm:grid-cols-3 gap-10 pb-10">
 
-        {/* ── Brand col (spans 2 on lg) ──────────────────────────────────── */}
-        <div className="lg:col-span-2 space-y-5">
-          {/* Logo + tagline */}
-          <div>
-            <Image
-              src="/images/logo.png"
-              alt={info.main.name}
-              width={320}
-              height={80}
-              className="object-contain h-16 w-auto max-w-[200px]"
-            />
-            <p className="text-sm text-muted-foreground mt-3 leading-relaxed max-w-xs">
-              Senior Full-Stack &amp; AI Automation Engineer building scalable systems
-              and intelligent automation that drives real business value.
-            </p>
-          </div>
-
-          {/* Availability badge */}
-          <div className="inline-flex items-center gap-2 bg-green-500/10 border border-green-500/20
-                          text-green-600 dark:text-green-400 rounded-full px-4 py-1.5 text-xs font-medium">
-            <span className="relative flex h-2 w-2">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75" />
-              <span className="relative inline-flex h-2 w-2 rounded-full bg-green-400" />
-            </span>
-            Open to new opportunities
-          </div>
-
-          {/* Built with chips */}
-          <div className="space-y-2">
-            <p className="text-xs font-mono text-muted-foreground/60 uppercase tracking-widest">
-              Built with
-            </p>
-            <div className="flex flex-wrap gap-2">
-              {BUILT_WITH.map(({ name, icon: Icon, color }) => (
-                <span
-                  key={name}
-                  className="inline-flex items-center gap-1.5 text-xs font-medium px-2.5 py-1
-                             rounded-lg border cursor-default transition-all duration-200
-                             hover:brightness-125 hover:scale-105 select-none"
-                  style={{
-                    backgroundColor: hexRgba(color, 0.08),
-                    borderColor:     hexRgba(color, 0.28),
-                    color:           hexRgba(color, 0.9),
-                  }}
-                >
-                  <Icon className="h-3 w-3 flex-shrink-0" style={{ color }} />
-                  {name}
-                </span>
-              ))}
+        {/* Brand */}
+        <div className="space-y-4">
+          <a href="#hero" className="flex items-center gap-2.5 group w-fit">
+            <div className="w-9 h-9 rounded-xl bg-primary flex items-center justify-center shadow-md">
+              <span className="text-white text-sm font-black tracking-tight">EN</span>
             </div>
+            <span className="font-bold text-foreground text-sm">{info.main.name}</span>
+          </a>
+          <p className="text-sm text-muted-foreground leading-relaxed max-w-xs">
+            Head of Engineering &amp; Full-Stack AI Engineer building scalable systems
+            and intelligent automation that drives real business value.
+          </p>
+          {/* Social row */}
+          <div className="flex items-center gap-2 pt-1">
+            {SOCIALS.map(({ icon: Icon, label, href }) => (
+              <Link
+                key={label}
+                href={href}
+                target={href.startsWith("mailto") ? undefined : "_blank"}
+                rel="noopener noreferrer"
+                aria-label={label}
+                className="w-8 h-8 rounded-lg border border-border bg-muted/50 flex items-center justify-center
+                           text-muted-foreground hover:text-primary hover:border-primary/40 transition-colors duration-200"
+              >
+                <Icon className="h-3.5 w-3.5" />
+              </Link>
+            ))}
           </div>
         </div>
 
-        {/* ── Quick links ────────────────────────────────────────────────── */}
+        {/* Quick Links */}
         <div className="space-y-4">
-          <p className="text-xs font-mono text-muted-foreground/60 uppercase tracking-widest">
-            Navigation
-          </p>
+          <p className="text-xs font-semibold text-foreground uppercase tracking-wider">Quick Links</p>
           <ul className="space-y-2.5">
-            {NAV_LINKS.map(({ label, href }) => (
+            {QUICK_LINKS.map(({ label, href }) => (
               <li key={label}>
-                <a
-                  href={href}
-                  className="group flex items-center gap-2 text-sm text-muted-foreground
-                             hover:text-primary transition-colors duration-200"
-                >
-                  <span className="h-px w-4 bg-border group-hover:w-6 group-hover:bg-primary
-                                   transition-all duration-200" />
+                <a href={href}
+                   className="text-sm text-muted-foreground hover:text-primary transition-colors duration-200">
                   {label}
                 </a>
               </li>
@@ -119,66 +74,34 @@ export default function Footer() {
           </ul>
         </div>
 
-        {/* ── Connect ────────────────────────────────────────────────────── */}
+        {/* Services */}
         <div className="space-y-4">
-          <p className="text-xs font-mono text-muted-foreground/60 uppercase tracking-widest">
-            Connect
-          </p>
-          <ul className="space-y-3">
-            {SOCIAL_LINKS.map(({ icon: Icon, label, value, href, color }) => (
-              <li key={label}>
-                <Link
-                  href={href}
-                  target={href.startsWith("mailto") ? undefined : "_blank"}
-                  rel="noopener noreferrer"
-                  className="group flex items-center gap-3"
-                >
-                  <div
-                    className="w-7 h-7 rounded-lg flex items-center justify-center flex-shrink-0
-                               transition-transform duration-200 group-hover:scale-110"
-                    style={{ backgroundColor: `${color}18`, border: `1px solid ${color}28` }}
-                  >
-                    <Icon className="h-3.5 w-3.5" style={{ color }} />
-                  </div>
-                  <div className="min-w-0">
-                    <p className="text-xs text-muted-foreground/60 font-mono">{label}</p>
-                    <p className="text-xs font-medium text-muted-foreground group-hover:text-primary
-                                  transition-colors truncate">
-                      {value}
-                    </p>
-                  </div>
-                </Link>
+          <p className="text-xs font-semibold text-foreground uppercase tracking-wider">Services</p>
+          <ul className="space-y-2.5">
+            {info.services.map((service) => (
+              <li key={service}>
+                <span className="text-sm text-muted-foreground">{service}</span>
               </li>
             ))}
           </ul>
         </div>
       </div>
 
-      {/* ── Bottom bar ────────────────────────────────────────────────────── */}
-      <div className="relative border-t border-border pt-6 pb-8 flex flex-col sm:flex-row
+      {/* Bottom bar */}
+      <div className="relative border-t border-border pt-6 flex flex-col sm:flex-row
                       items-center justify-between gap-4">
+        <p className="text-xs text-muted-foreground">
+          &copy; {year}{" "}
+          <span className="font-medium text-foreground">{info.main.name}</span>
+          {" · "}All Rights Reserved
+        </p>
 
-        <div className="flex items-center gap-1.5 text-xs text-muted-foreground">
-          <Sparkles className="h-3 w-3 text-primary/60" />
-          <span>
-            &copy; {year}{" "}
-            <span className="font-medium text-foreground">{info.main.name}</span>
-            {" · "}All Rights Reserved
-          </span>
-        </div>
-
-        {/* Back to top */}
-        <a
-          href="#hero"
-          aria-label="Back to top"
-          className="group flex items-center gap-2 text-xs text-muted-foreground
-                     hover:text-primary transition-colors duration-200"
-        >
+        <a href="#hero" aria-label="Back to top"
+           className="group flex items-center gap-2 text-xs text-muted-foreground
+                      hover:text-primary transition-colors duration-200">
           <span className="hidden sm:inline">Back to top</span>
-          <span className="w-7 h-7 rounded-full border border-border bg-muted/50
-                           flex items-center justify-center
-                           group-hover:border-primary/40 group-hover:bg-primary/10
-                           transition-all duration-200">
+          <span className="w-7 h-7 rounded-full border border-border bg-muted/50 flex items-center justify-center
+                           group-hover:border-primary/40 group-hover:bg-primary/10 transition-all duration-200">
             <ArrowUp className="h-3.5 w-3.5" />
           </span>
         </a>

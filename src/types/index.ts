@@ -7,6 +7,7 @@ export interface Project {
   github: string;
   link: string;
   featured: boolean;
+  screenshot?: string;
 }
 
 export interface Experience {
@@ -41,6 +42,14 @@ export interface SkillSet {
   testing: string[];
 }
 
+export interface About {
+  title: string;
+  highlight: string;
+  body: string;
+  quote: string;
+  traits: string[];
+}
+
 export interface UserInfo {
   main: {
     name: string;
@@ -49,6 +58,8 @@ export interface UserInfo {
     summary: string;
     photo: string;
     email: string;
+    location: string;
+    availability: string;
   };
   socials: {
     github: string;
@@ -65,4 +76,6 @@ export interface UserInfo {
     note: string;
   };
   footer: string;
+  about: About;
+  services: string[];
 }
