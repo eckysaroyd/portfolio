@@ -164,17 +164,6 @@ const info: UserInfo = {
       link: "https://joyunity.com/",
       featured: true,
     },
-    {
-      title: "mgcs.ca",
-      category: "Corporate Website",
-      description:
-        "mgcs.ca is a professional corporate website built with a fully custom content management system delivering the flexibility of an enterprise platform without the overhead of off-the-shelf solutions. Built on Laravel with a jQuery-powered frontend, the platform features dynamic service pages, team profile management, project portfolio showcasing, and a secure admin panel that empowers non-technical staff to independently manage all website content. SEO-optimised from the ground up with structured metadata, semantic HTML, and fast-loading assets, the site drives organic search discovery and supports the company's long-term digital marketing strategy. A clean, well-documented codebase ensures the platform remains easy to extend and maintain as the business evolves a corporate digital asset that delivers lasting value.",
-      technologies: "Laravel,PHP,MySQL,jQuery,HTML5,Bootstrap,CSS3",
-      highlights: ["Custom CMS", "SEO optimized", "Admin panel", "Dynamic content"],
-      github: "http://github.com/eckysaroyd",
-      link: "http://mgcs.ca/",
-      featured: false,
-    },
   ],
 
   // ============ EDUCATION ============
