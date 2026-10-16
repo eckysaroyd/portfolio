@@ -175,7 +175,7 @@ const info: UserInfo = {
     },
     {
       position: "CTO / Head Manager",
-      company: "JoyUnity Innovations | joyunityinnovations.com",
+      company: "JoyUnity Innovations | United States",
       duration: "Feb 2025 – Present",
       image: "/images/joyunityinnovations.png",
       descriptions: [
@@ -186,7 +186,7 @@ const info: UserInfo = {
     },
     {
       position: "Software Engineer",
-      company: "Shaun Software Hub | India",
+      company: "Shaun Software Hub | Pune, India",
       duration: "Feb 2025 – Present",
       image: "/images/shaunsoftwarehub.png",
       descriptions: [
