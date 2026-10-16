@@ -123,8 +123,8 @@ export default function Hero() {
             </div>
 
             {/* Badge — left middle: 50+ Projects */}
-            <div className="absolute top-1/3 -left-4 sm:-left-6 z-10">
-              <div className="-ml-6 sm:ml-0 flex items-center gap-2 bg-card border border-border
+            <div className="absolute top-1/3 -left-4 sm:-left-16 z-10">
+              <div className="-ml-10 sm:ml-0 flex items-center gap-2 bg-card border border-border
                               rounded-xl px-3 py-2 shadow-xl backdrop-blur-sm">
                 <div className="h-7 w-7 rounded-lg bg-primary/15 flex items-center justify-center flex-shrink-0">
                   <BarChart2 className="h-3.5 w-3.5 text-primary" />
