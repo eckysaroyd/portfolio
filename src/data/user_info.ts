@@ -142,17 +142,6 @@ const info: UserInfo = {
       link: "http://kasudia.com/",
       featured: true,
     },
-    {
-      title: "WoW Laundry",
-      category: "Service Management",
-      description:
-        "WoW Laundry transformed a traditional laundry operation into a digitally-driven, efficiency-optimized service business and the numbers prove it. The full-stack platform features automated job scheduling, real-time order tracking, customer self-service booking, driver assignment workflows, service tier management, and a powerful admin dashboard unified into a single cohesive system. The result was a 40% increase in operational efficiency and a measurable reduction in manual coordination overhead and missed pickups. Built with Laravel and Vue.js on a responsive, mobile-first UI, WoW Laundry is a compelling example of how purposeful technology investment in service businesses translates directly into competitive advantage, customer loyalty, and bottom-line growth.",
-      technologies: "Laravel,Vue.js,Tailwind CSS,JavaScript,MySQL",
-      highlights: ["40% efficiency increase", "Real-time tracking", "Mobile-responsive", "Automated scheduling"],
-      github: "https://github.com/eckysaroyd",
-      link: "https://wowlaundry.in/",
-      featured: true,
-    },
   ],
 
   // ============ EDUCATION ============
