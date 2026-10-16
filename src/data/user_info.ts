@@ -44,6 +44,39 @@ const info: UserInfo = {
   // ============ PROJECTS ============
   projects: [
     {
+      title: "Faanoole Properties",
+      category: "Real Estate Platform",
+      description:
+        "Faanoole Properties is a production-grade, full-stack apartment management platform serving Faanoole Apartments — live with real tenants, leases, payments, and maintenance operations. The platform spans three layers: a polished public marketing website showcasing the building and available units, a MakeMyTrip-style unit booking and reservation system with reference-code tracking and unit holds requiring no login, and a fully featured resident portal where tenants manage lease documents, rent payments, maintenance tickets, and service requests. A powerful admin dashboard gives management complete control over tenants, units, payments, technician assignments, and a real-time maintenance mode toggle. Post-launch, the platform was expanded with a technician role workflow, vehicle tracking, PDF receipt generation, an AI assistant, tour scheduling, and advanced admin settings. Built on Next.js and Supabase with a battle-tested schema — audited for RLS, indexing, and additive migrations — Faanoole Properties is a blueprint for serious, production-ready real estate management engineering.",
+      technologies: "Next.js,TypeScript,Supabase,Tailwind CSS,PLpgSQL",
+      highlights: ["Live in production with real tenants", "Booking system with reference-code tracking", "Resident portal with payments & tickets", "AI assistant + technician workflow"],
+      github: "https://github.com/faanooleproperties/faanoole_properties",
+      link: "https://faanooleapartments.com/",
+      featured: true,
+    },
+    {
+      title: "Somali Fuel Company",
+      category: "Business Website",
+      description:
+        "Somali Fuel Company is a full-stack digital platform built for a fuel distribution business — engineered to establish professional credibility, streamline client engagement, and support operational workflows in a sector where trust and reliability are non-negotiable. Built on Next.js and TypeScript with Supabase as the data backbone and Python-powered backend services for operational processing, the platform delivers a responsive, high-performance corporate presence with structured service showcasing, inquiry management, and a scalable architecture ready to grow with the business. Deployed on Vercel for global performance and zero-downtime reliability, this project demonstrates purposeful engineering for infrastructure-sector clients where digital professionalism is increasingly a differentiator.",
+      technologies: "Next.js,TypeScript,Supabase,Python,Tailwind CSS",
+      highlights: ["Full-stack corporate platform", "Python-powered backend services", "Supabase real-time backend", "Deployed on Vercel"],
+      github: "https://github.com/JoyUnityInnovations/somali-fuel-company",
+      link: "https://somali-fuel-company.vercel.app/",
+      featured: false,
+    },
+    {
+      title: "Ruach Coffee",
+      category: "Business Website",
+      description:
+        "Ruach Coffee is a premium coffee brand platform engineered to reflect the quality, identity, and customer experience that the Ruach Premium brand demands. Built on Next.js and TypeScript with a Supabase backend, the platform combines brand storytelling with a polished product showcase and customer engagement layer — delivering a fast, visually compelling digital presence that converts visitors into loyal customers. The architecture is built for performance and scale: server-side rendering for instant load times, Supabase for real-time data management, and a fully responsive design tuned for the modern consumer browsing on any device. Ruach Coffee is proof that premium brand engineering and technical rigour are not mutually exclusive.",
+      technologies: "Next.js,TypeScript,Supabase,Tailwind CSS",
+      highlights: ["Premium brand digital presence", "Next.js SSR for fast load times", "Supabase real-time backend", "Responsive across all devices"],
+      github: "https://github.com/shaunSoftwareHub/ruach-coffee",
+      link: "https://ruachpremium.com/",
+      featured: false,
+    },
+    {
       title: "AutoOps Schools",
       category: "AI SaaS Platform",
       description:
@@ -162,6 +195,28 @@ const info: UserInfo = {
 
   // ============ EXPERIENCE ============
   experience: [
+    {
+      position: "Head of Engineering Team",
+      company: "Matchez | app.matchez.co",
+      duration: "Nov 2025 – Present",
+      image: "/images/matchez.png",
+      descriptions: [
+        "Joined as Senior Software Developer (Nov 2025 – Jul 2026), architecting and delivering core platform features for the Matchez app — a production matchmaking and social platform.",
+        "Promoted to Head of Engineering Team (Jul 2026 – Present), leading the full engineering function: technical strategy, system architecture, team coordination, and delivery.",
+        "Driving platform scalability, engineering standards, and end-to-end ownership of the technical roadmap across the entire product.",
+      ],
+    },
+    {
+      position: "CTO / Head Manager",
+      company: "JoyUnity Innovations | joyunityinnovations.com",
+      duration: "Feb 2025 – Present",
+      image: "/images/joyunityinnovations.png",
+      descriptions: [
+        "Leading all technical operations as CTO — defining the engineering vision, architecture decisions, and technology strategy across all JoyUnity Innovations products.",
+        "Managing and mentoring the engineering team, overseeing product development cycles, and ensuring scalable, production-grade delivery.",
+        "Driving innovation in full-stack systems, AI integration, and cross-platform engineering as the company's most senior technical leader.",
+      ],
+    },
     {
       position: "Software Engineer",
       company: "Shaun Software Hub | India",
