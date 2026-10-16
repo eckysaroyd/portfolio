@@ -164,7 +164,7 @@ const info: UserInfo = {
   experience: [
     {
       position: "Head of Engineering Team",
-      company: "Matchez | app.matchez.co",
+      company: "Matchez | UK",
       duration: "Nov 2025 – Present",
       image: "/images/matchez.png",
       descriptions: [
