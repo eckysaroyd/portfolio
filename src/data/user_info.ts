@@ -153,17 +153,6 @@ const info: UserInfo = {
       link: "https://wowlaundry.in/",
       featured: true,
     },
-    {
-      title: "JoyUnity",
-      category: "Social Platform",
-      description:
-        "JoyUnity is a cross-platform creator monetization ecosystem a technically sophisticated social platform engineered to empower 5,000+ content creators to build audiences, broadcast live, and earn revenue at scale. The platform combines a Laravel API backend with a Flutter mobile application and responsive web interface, delivering real-time live streaming, integrated digital wallets and payout processing, audience engagement tools, subscription management, and a unified creator dashboard. An API-first architecture ensures seamless consistency across web and mobile, while a scalable MySQL backend handles high-concurrency creator and viewer interactions without degradation. JoyUnity is a testament to what full-stack, cross-platform engineering looks like when built for scale — designed for creators, engineered for growth.",
-      technologies: "Laravel,Flutter,PHP,JavaScript,Bootstrap,MySQL,API Integration",
-      highlights: ["5,000+ creators", "Cross-platform support", "Live streaming", "Monetization tools"],
-      github: "https://github.com/eckysaroyd",
-      link: "https://joyunity.com/",
-      featured: true,
-    },
   ],
 
   // ============ EDUCATION ============
