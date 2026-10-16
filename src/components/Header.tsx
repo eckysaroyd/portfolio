@@ -2,17 +2,18 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import info from "@/data/user_info";
 import { ThemeToggle } from "@/components/ThemeToggle";
 import { Github, Linkedin, Menu, X, Download } from "lucide-react";
 
 const NAV = [
-  { label: "Home",       href: "#hero"       },
-  { label: "About",      href: "#about"      },
-  { label: "Projects",   href: "#projects"   },
-  { label: "Experience", href: "#experience" },
-  { label: "Skills",     href: "#skills"     },
-  { label: "Contact",    href: "#contact"    },
+  { label: "Home",       href: "/#hero",      id: "hero"       },
+  { label: "About",      href: "/about",       id: "about"      },
+  { label: "Projects",   href: "/#projects",  id: "projects"   },
+  { label: "Experience", href: "/#experience",id: "experience" },
+  { label: "Skills",     href: "/#skills",    id: "skills"     },
+  { label: "Contact",    href: "/#contact",   id: "contact"    },
 ];
 
 const SOCIALS = [
@@ -21,9 +22,16 @@ const SOCIALS = [
 ];
 
 export function Header() {
+  const pathname = usePathname();
   const [scrolled,  setScrolled]  = useState(false);
   const [active,    setActive]    = useState("hero");
   const [menuOpen,  setMenuOpen]  = useState(false);
+
+  // On /about page, always mark "about" as active
+  useEffect(() => {
+    if (pathname === "/about") setActive("about");
+    else setActive("hero");
+  }, [pathname]);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 8);
@@ -33,7 +41,8 @@ export function Header() {
   }, []);
 
   useEffect(() => {
-    const ids = ["hero", "about", "projects", "experience", "skills", "contact"];
+    if (pathname !== "/") return;
+    const ids = ["hero", "projects", "experience", "skills", "contact"];
     const observers = ids.map((id) => {
       const el = document.getElementById(id);
       if (!el) return null;
@@ -45,7 +54,7 @@ export function Header() {
       return obs;
     });
     return () => observers.forEach((obs) => obs?.disconnect());
-  }, []);
+  }, [pathname]);
 
   useEffect(() => {
     const onResize = () => { if (window.innerWidth >= 768) setMenuOpen(false); };
@@ -65,7 +74,7 @@ export function Header() {
         <div className="flex items-center justify-between h-16">
 
           {/* Logo */}
-          <a href="#hero" className="flex items-center gap-2.5 group flex-shrink-0">
+          <Link href="/" className="flex items-center gap-2.5 group flex-shrink-0">
             <div className="w-9 h-9 rounded-xl bg-primary flex items-center justify-center shadow-md
                             group-hover:shadow-primary/40 transition-shadow duration-200">
               <span className="text-white text-sm font-black tracking-tight">EN</span>
@@ -73,15 +82,14 @@ export function Header() {
             <span className="font-bold text-foreground text-sm hidden sm:block">
               {info.main.name}
             </span>
-          </a>
+          </Link>
 
           {/* Desktop nav */}
           <nav className="hidden md:flex items-center gap-0.5" aria-label="Main navigation">
-            {NAV.map(({ label, href }) => {
-              const id      = href.replace("#", "");
+            {NAV.map(({ label, href, id }) => {
               const isActive = active === id;
               return (
-                <a
+                <Link
                   key={label}
                   href={href}
                   className={`relative px-3.5 py-2 text-sm font-medium rounded-lg transition-colors duration-200 ${
@@ -94,7 +102,7 @@ export function Header() {
                   {isActive && (
                     <span className="absolute inset-x-3 -bottom-px h-[2px] bg-primary rounded-full" />
                   )}
-                </a>
+                </Link>
               );
             })}
           </nav>
@@ -154,11 +162,10 @@ export function Header() {
       >
         <div className="bg-background/95 backdrop-blur-xl border-t border-border px-4 pb-4 pt-2">
           <nav className="flex flex-col gap-1" aria-label="Mobile navigation">
-            {NAV.map(({ label, href }) => {
-              const id      = href.replace("#", "");
+            {NAV.map(({ label, href, id }) => {
               const isActive = active === id;
               return (
-                <a
+                <Link
                   key={label}
                   href={href}
                   onClick={() => setMenuOpen(false)}
@@ -170,7 +177,7 @@ export function Header() {
                 >
                   {isActive && <span className="w-1 h-1 rounded-full bg-primary flex-shrink-0" />}
                   {label}
-                </a>
+                </Link>
               );
             })}
           </nav>

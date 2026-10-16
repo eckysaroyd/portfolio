@@ -4,9 +4,9 @@ import Link from "next/link";
 import { MapPin, Download, ArrowRight, Star, BarChart2, Cpu } from "lucide-react";
 
 const STATS = [
-  { value: "10+", label: "Years Experience"     },
-  { value: "50+", label: "Projects Delivered"   },
-  { value: "20+", label: "Technologies"         },
+  { value: "6+",   label: "Years Experience"    },
+  { value: "50+",  label: "Projects Delivered"  },
+  { value: "20+",  label: "Technologies"        },
   { value: "100%", label: "Client Satisfaction" },
 ];
 
@@ -117,7 +117,7 @@ export default function Hero() {
                 </div>
                 <div>
                   <p className="text-xs text-muted-foreground font-mono">Experience</p>
-                  <p className="text-sm font-black text-foreground">10+ Years</p>
+                  <p className="text-sm font-black text-foreground">6+ Years</p>
                 </div>
               </div>
             </div>

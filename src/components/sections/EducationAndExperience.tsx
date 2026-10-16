@@ -16,7 +16,7 @@ export default function EducationAndExperience() {
             Professional Experience
           </h2>
           <p className="text-muted-foreground max-w-xl leading-relaxed">
-            10+ years building production software across multiple countries, industries, and tech stacks.
+            6+ years building production software across multiple countries, industries, and tech stacks.
           </p>
         </div>
         <a
