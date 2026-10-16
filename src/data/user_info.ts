@@ -62,7 +62,7 @@ const info: UserInfo = {
       technologies: "Next.js,TypeScript,Supabase,Python,Tailwind CSS",
       highlights: ["Full-stack corporate platform", "Python-powered backend services", "Supabase real-time backend", "Deployed on Vercel"],
       github: "https://github.com/JoyUnityInnovations/somali-fuel-company",
-      link: "https://somali-fuel-company.vercel.app/",
+      link: "https://www.somalifuelcompany.com/login",
       featured: false,
     },
     {
