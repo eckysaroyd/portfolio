@@ -117,7 +117,7 @@ const info: UserInfo = {
       technologies: "Next.js,Supabase,TypeScript,Tailwind CSS",
       highlights: ["Real-time inquiry management", "HIPAA-conscious design", "24/7 service portal", "Mobile-responsive"],
       github: "https://github.com/eckysaroyd",
-      link: "https://brightwayhomecare.vercel.app/",
+      link: "https://www.brightwayhomecarellc.com/",
       featured: false,
     },
     {
