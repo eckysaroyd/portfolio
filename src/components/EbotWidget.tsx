@@ -241,11 +241,53 @@ export function EbotWidget() {
   const [showForm, setShowForm]       = useState(false);
   const [showTooltip, setShowTooltip] = useState(true);
   const [hasNew, setHasNew]           = useState(false);
+  const [isListening, setIsListening] = useState(false);
 
   const bottomRef  = useRef<HTMLDivElement>(null);
   const inputRef   = useRef<HTMLInputElement>(null);
   const msgRef     = useRef<Message[]>([WELCOME]);
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const recognitionRef = useRef<any>(null);
   msgRef.current   = messages;
+
+  const toggleMic = useCallback(() => {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const SR = (window as any).SpeechRecognition ?? (window as any).webkitSpeechRecognition;
+
+    if (!SR) {
+      alert("Your browser doesn't support voice input. Try Chrome or Edge.");
+      return;
+    }
+
+    if (isListening && recognitionRef.current) {
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      (recognitionRef.current as any).stop();
+      return;
+    }
+
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const recognition: any = new SR();
+    recognition.lang = "en-US";
+    recognition.interimResults = true;
+    recognition.continuous = false;
+    recognitionRef.current = recognition;
+
+    recognition.onstart  = () => setIsListening(true);
+    recognition.onend    = () => setIsListening(false);
+    recognition.onerror  = () => setIsListening(false);
+
+    recognition.onresult = (e: { results: { isFinal: boolean; 0: { transcript: string } }[] }) => {
+      const transcript = Array.from(e.results)
+        .map((r) => r[0].transcript)
+        .join("");
+      setInput(transcript);
+      if (e.results[e.results.length - 1].isFinal) {
+        setIsListening(false);
+      }
+    };
+
+    recognition.start();
+  }, [isListening]);
 
   // Hide tooltip after 5 s
   useEffect(() => {
@@ -437,11 +479,19 @@ export function EbotWidget() {
                 value={input}
                 onChange={e => setInput(e.target.value)}
                 onKeyDown={e => { if (e.key === "Enter" && !e.shiftKey) { e.preventDefault(); send(input); } }}
-                placeholder="Type your message..."
+                placeholder={isListening ? "Listening..." : "Type your message..."}
                 disabled={loading}
                 className="flex-1 text-sm bg-transparent outline-none text-gray-800 placeholder:text-gray-400 disabled:opacity-50"
               />
-              <button className="w-8 h-8 flex items-center justify-center text-gray-400 hover:text-gray-600 transition-colors flex-shrink-0">
+              <button
+                onClick={toggleMic}
+                title={isListening ? "Stop recording" : "Speak your message"}
+                className={`w-8 h-8 flex items-center justify-center transition-colors flex-shrink-0 rounded-full ${
+                  isListening
+                    ? "text-white bg-red-500 animate-pulse"
+                    : "text-gray-400 hover:text-blue-600"
+                }`}
+              >
                 <Mic className="h-4 w-4" />
               </button>
               <button
