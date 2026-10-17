@@ -246,12 +246,10 @@ export function EbotWidget() {
   const bottomRef  = useRef<HTMLDivElement>(null);
   const inputRef   = useRef<HTMLInputElement>(null);
   const msgRef     = useRef<Message[]>([WELCOME]);
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const recognitionRef = useRef<any>(null);
+  const recognitionRef = useRef<any>(null); // Web Speech API — no TS types available
   msgRef.current   = messages;
 
   const toggleMic = useCallback(() => {
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const SR = (window as any).SpeechRecognition ?? (window as any).webkitSpeechRecognition;
 
     if (!SR) {
@@ -260,12 +258,10 @@ export function EbotWidget() {
     }
 
     if (isListening && recognitionRef.current) {
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      (recognitionRef.current as any).stop();
+        (recognitionRef.current as any).stop();
       return;
     }
 
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const recognition: any = new SR();
     recognition.lang = "en-US";
     recognition.interimResults = true;
