@@ -3,6 +3,7 @@ import { GeistSans } from "geist/font/sans";
 import { GeistMono } from "geist/font/mono";
 import { ThemeProvider } from "next-themes";
 import { Header } from "@/components/Header";
+import { EbotWidget } from "@/components/EbotWidget";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -18,8 +19,8 @@ export const metadata: Metadata = {
     "Node.js",
   ],
   icons: {
-    icon: [{ url: "/images/logo.png", type: "image/png" }],
-    apple: "/images/logo.png",
+    icon: [{ url: "/images/favicon.svg", type: "image/svg+xml" }],
+    apple: "/images/en-icon.png",
   },
 };
 
@@ -43,6 +44,7 @@ export default function RootLayout({
         >
           <Header />
           {children}
+          <EbotWidget />
         </ThemeProvider>
       </body>
     </html>

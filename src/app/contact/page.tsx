@@ -10,7 +10,7 @@ import {
   ArrowRight, Send, Loader2, CheckCircle2, XCircle,
   Calendar, Clock, Linkedin, Github,
 } from "lucide-react";
-import { SiWhatsapp, SiX, SiYoutube } from "react-icons/si";
+import { SiWhatsapp } from "react-icons/si";
 
 const FEATURES = [
   {
@@ -39,8 +39,6 @@ const FEATURES = [
 const SOCIALS = [
   { icon: Linkedin, href: info.socials.linkedin, label: "LinkedIn",  color: "#0a66c2" },
   { icon: Github,   href: info.socials.github,   label: "GitHub",    color: "#6e40c9" },
-  { icon: SiX,      href: "#",                   label: "X",         color: "#000000" },
-  { icon: SiYoutube,href: "#",                   label: "YouTube",   color: "#ff0000" },
   { icon: Globe2,   href: "/",                   label: "Website",   color: "#3b82f6" },
 ];
 
