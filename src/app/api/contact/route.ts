@@ -14,10 +14,12 @@ interface ContactPayload {
 
 // ── Transporter ───────────────────────────────────────────────────────────
 const transporter = nodemailer.createTransport({
-  service: "gmail",
+  host: process.env.SMTP_HOST,
+  port: Number(process.env.SMTP_PORT) || 465,
+  secure: (Number(process.env.SMTP_PORT) || 465) === 465,
   auth: {
-    user: process.env.GMAIL_USER,
-    pass: process.env.GMAIL_APP_PASSWORD,
+    user: process.env.SMTP_USER,
+    pass: process.env.SMTP_PASS,
   },
 });
 
@@ -215,11 +217,11 @@ export async function POST(req: NextRequest) {
   if (error) return NextResponse.json({ error }, { status: 400 });
 
   const payload = body as ContactPayload;
-  const to      = process.env.CONTACT_TO_EMAIL!;
+  const to      = process.env.CONTACT_EMAIL_TO!;
 
   try {
     await transporter.sendMail({
-      from:    `"Portfolio Contact" <${process.env.GMAIL_USER}>`,
+      from:    `"Portfolio Contact" <${process.env.SMTP_USER}>`,
       to,
       replyTo: payload.email,
       subject: `[Portfolio] ${payload.subject || "New Message"} — from ${payload.name}`,
@@ -227,7 +229,7 @@ export async function POST(req: NextRequest) {
     });
 
     await transporter.sendMail({
-      from:    `"Eckysaroyd Nyato" <${process.env.GMAIL_USER}>`,
+      from:    `"Eckysaroyd Nyato" <${process.env.SMTP_USER}>`,
       to:      payload.email,
       subject: `Got your message, ${payload.name.split(" ")[0]}! · Eckysaroyd Nyato`,
       html:    autoReplyHtml(payload),
