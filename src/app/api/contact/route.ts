@@ -36,17 +36,9 @@ function validate(body: Partial<ContactPayload>): string | null {
 
 const BASE = "https://eckysaroyd.vercel.app";
 
-// Inline logo block — no external image so it renders in every email client
-const logoBlock = (circleSize: number, nameSize: number, tagSize: number) => `
-  <table cellpadding="0" cellspacing="0"><tr>
-    <td style="padding-right:10px;vertical-align:middle;">
-      <div style="width:${circleSize}px;height:${circleSize}px;background:linear-gradient(135deg,#1a56db 0%,#2563eb 100%);border-radius:50%;text-align:center;line-height:${circleSize}px;font-size:${Math.round(circleSize * 0.43)}px;font-weight:900;color:#ffffff;font-family:Arial,sans-serif;">E</div>
-    </td>
-    <td valign="middle">
-      <p style="margin:0;font-size:${nameSize}px;font-weight:800;color:#1e293b;line-height:1.2;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;">Eckysaroyd Nyato</p>
-      <p style="margin:3px 0 0;font-size:${tagSize}px;color:#94a3b8;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;">Full-Stack &amp; AI Engineer</p>
-    </td>
-  </tr></table>`;
+// EN wordmark logo — hosted on Vercel, transparent PNG
+const logoImg = (height: number) =>
+  `<img src="${BASE}/images/email-logo.png" alt="Eckysaroyd Nyato" height="${height}" style="height:${height}px;width:auto;display:block;border:0;" loading="eager">`;
 
 // Social icon circle
 const socialCircle = (href: string, label: string, color: string) =>
@@ -76,28 +68,29 @@ function notificationHtml(p: ContactPayload): string {
   <tr><td align="center">
   <table width="600" cellpadding="0" cellspacing="0" style="max-width:600px;width:100%;background:#ffffff;border-radius:16px;overflow:hidden;box-shadow:0 4px 32px rgba(37,99,235,0.08);">
 
-    <!-- HEADER: inline logo (no broken img) + notification badge -->
+    <!-- HEADER: EN wordmark logo + notification badge -->
     <tr><td style="padding:20px 28px;background:#ffffff;border-bottom:1px solid #f0f4ff;">
       <table width="100%" cellpadding="0" cellspacing="0"><tr>
-        <td valign="middle">${logoBlock(46, 15, 11)}</td>
+        <td valign="middle">${logoImg(50)}</td>
         <td align="right" valign="middle">
           <span style="display:inline-block;background:#eff6ff;border:1px solid #bfdbfe;border-radius:20px;padding:7px 16px;font-size:12px;font-weight:600;color:#2563eb;white-space:nowrap;">&#x2709;&nbsp; Portfolio Notification</span>
         </td>
       </tr></table>
     </td></tr>
 
-    <!-- BLUE BANNER -->
-    <tr><td style="padding:0;background:linear-gradient(135deg,#1a4fd8 0%,#2563eb 60%,#1d86e8 100%);">
-      <table width="100%" cellpadding="0" cellspacing="0"><tr>
-        <td style="padding:36px 0 36px 40px;vertical-align:middle;width:58%;">
-          <p style="margin:0 0 8px;font-size:10px;letter-spacing:3px;text-transform:uppercase;color:rgba(255,255,255,0.65);font-weight:700;">New Message Received</p>
-          <h1 style="margin:0 0 12px;font-size:26px;font-weight:800;color:#ffffff;line-height:1.25;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;">You have a new<br>portfolio inquiry!</h1>
-          <p style="margin:0;font-size:13px;color:rgba(255,255,255,0.82);line-height:1.65;">Someone has submitted a message through<br>your portfolio contact form.</p>
-        </td>
-        <td style="padding:0 12px 0 0;vertical-align:bottom;text-align:right;width:42%;">
-          <img src="${BASE}/images/email-banner.png" alt="" width="215" style="width:215px;max-width:100%;height:auto;display:block;margin-left:auto;" loading="eager">
-        </td>
-      </tr></table>
+    <!-- FULL-WIDTH BANNER — email-banner.png as background, text overlaid left -->
+    <tr><td style="padding:0;background-color:#1a56db;">
+      <table width="100%" cellpadding="0" cellspacing="0"
+             style="background-image:url('${BASE}/images/email-banner.png');background-size:cover;background-position:center;background-color:#1a56db;">
+        <tr>
+          <td style="padding:40px 0 40px 36px;vertical-align:middle;width:55%;">
+            <p style="margin:0 0 8px;font-size:10px;letter-spacing:3px;text-transform:uppercase;color:rgba(255,255,255,0.75);font-weight:700;">New Message Received</p>
+            <h1 style="margin:0 0 12px;font-size:26px;font-weight:800;color:#ffffff;line-height:1.25;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;">You have a new<br>portfolio inquiry!</h1>
+            <p style="margin:0;font-size:13px;color:rgba(255,255,255,0.90);line-height:1.65;">Someone has submitted a message through<br>your portfolio contact form.</p>
+          </td>
+          <td style="width:45%;">&nbsp;</td>
+        </tr>
+      </table>
     </td></tr>
 
     <!-- CONTACT DETAILS CARD -->
@@ -162,7 +155,7 @@ function notificationHtml(p: ContactPayload): string {
     <!-- FOOTER -->
     <tr><td style="padding:20px 28px;background:#f8faff;border-top:1px solid #e8eef8;">
       <table width="100%" cellpadding="0" cellspacing="0"><tr>
-        <td valign="middle" width="38%">${logoBlock(36, 13, 10)}</td>
+        <td valign="middle" width="38%">${logoImg(40)}</td>
         <td align="center" valign="middle" width="28%">
           <table cellpadding="0" cellspacing="0" align="center"><tr>
             ${socialCircle("https://www.linkedin.com/in/eckysaroyd/", "in",  "#2563eb")}
@@ -204,28 +197,27 @@ function autoReplyHtml(p: ContactPayload): string {
   <tr><td align="center">
   <table width="600" cellpadding="0" cellspacing="0" style="max-width:600px;width:100%;background:#ffffff;border-radius:16px;overflow:hidden;box-shadow:0 4px 32px rgba(37,99,235,0.10);">
 
-    <!-- HEADER: inline logo + badge -->
+    <!-- HEADER: EN wordmark logo + badge -->
     <tr><td style="padding:20px 28px;background:#ffffff;border-bottom:1px solid #f0f4ff;">
       <table width="100%" cellpadding="0" cellspacing="0"><tr>
-        <td valign="middle">${logoBlock(46, 15, 11)}</td>
+        <td valign="middle">${logoImg(50)}</td>
         <td align="right" valign="middle">
           <span style="display:inline-block;background:#f0fdf4;border:1px solid #bbf7d0;border-radius:20px;padding:7px 16px;font-size:12px;font-weight:600;color:#16a34a;white-space:nowrap;">&#x2713;&nbsp; Message Confirmed</span>
         </td>
       </tr></table>
     </td></tr>
 
-    <!-- BANNER -->
-    <tr><td style="padding:0;">
-      <table width="100%" cellpadding="0" cellspacing="0" style="background:linear-gradient(135deg,#1a4fd8 0%,#2563eb 55%,#1d86e8 100%);">
+    <!-- FULL-WIDTH BANNER with background image -->
+    <tr><td style="padding:0;background-color:#1a56db;">
+      <table width="100%" cellpadding="0" cellspacing="0"
+             style="background-image:url('${BASE}/images/email-banner.png');background-size:cover;background-position:center;background-color:#1a56db;">
         <tr>
-          <td style="padding:32px 40px;vertical-align:middle;width:55%;">
-            <p style="margin:0 0 8px;font-size:10px;letter-spacing:3px;text-transform:uppercase;color:rgba(255,255,255,0.7);font-weight:700;">Message Confirmed</p>
-            <h1 style="margin:0 0 10px;font-size:22px;font-weight:800;color:#ffffff;line-height:1.3;">Got your message,<br>${firstName}!</h1>
-            <p style="margin:0;font-size:13px;color:rgba(255,255,255,0.85);line-height:1.6;">I&apos;ll review your message and<br>get back to you within 24 hours.</p>
+          <td style="padding:40px 0 40px 36px;vertical-align:middle;width:55%;">
+            <p style="margin:0 0 8px;font-size:10px;letter-spacing:3px;text-transform:uppercase;color:rgba(255,255,255,0.75);font-weight:700;">Message Confirmed</p>
+            <h1 style="margin:0 0 12px;font-size:26px;font-weight:800;color:#ffffff;line-height:1.25;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;">Got your message,<br>${firstName}!</h1>
+            <p style="margin:0;font-size:13px;color:rgba(255,255,255,0.90);line-height:1.65;">I&apos;ll review your message and<br>get back to you within 24 hours.</p>
           </td>
-          <td style="padding:0;vertical-align:bottom;text-align:right;width:45%;">
-            <img src="${BASE}/images/email-banner.png" alt="" width="250" style="width:250px;height:auto;display:block;margin-left:auto;">
-          </td>
+          <td style="width:45%;">&nbsp;</td>
         </tr>
       </table>
     </td></tr>
@@ -276,7 +268,7 @@ function autoReplyHtml(p: ContactPayload): string {
     <!-- FOOTER -->
     <tr><td style="padding:20px 28px;background:#f8faff;border-top:1px solid #e8eef8;">
       <table width="100%" cellpadding="0" cellspacing="0"><tr>
-        <td valign="middle" width="38%">${logoBlock(36, 13, 10)}</td>
+        <td valign="middle" width="38%">${logoImg(40)}</td>
         <td align="center" valign="middle" width="28%">
           <table cellpadding="0" cellspacing="0" align="center"><tr>
             ${socialCircle("https://www.linkedin.com/in/eckysaroyd/", "in",  "#2563eb")}
