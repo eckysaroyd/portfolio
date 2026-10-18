@@ -36,9 +36,9 @@ export default function Footer() {
             <Image
               src="/images/en-logo.png"
               alt={info.main.name}
-              width={160}
-              height={52}
-              className="h-10 w-auto object-contain"
+              width={280}
+              height={153}
+              className="h-20 w-auto object-contain"
             />
           </a>
           <p className="text-sm text-muted-foreground leading-relaxed max-w-xs">

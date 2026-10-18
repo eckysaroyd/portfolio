@@ -83,9 +83,9 @@ export function Header() {
             <Image
               src="/images/en-logo.png"
               alt={info.main.name}
-              width={160}
-              height={52}
-              className="h-9 w-auto object-contain"
+              width={280}
+              height={153}
+              className="h-16 w-auto object-contain"
               priority
             />
           </Link>
