@@ -4,7 +4,6 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import info from "@/data/user_info";
 import { ThemeToggle } from "@/components/ThemeToggle";
 import { Github, Linkedin, Menu, X, Download } from "lucide-react";
 
@@ -18,8 +17,8 @@ const NAV = [
 ];
 
 const SOCIALS = [
-  { icon: Github,   label: "GitHub",   href: info.socials.github  },
-  { icon: Linkedin, label: "LinkedIn", href: info.socials.linkedin },
+  { icon: Github,   label: "GitHub",   href: "http://github.com/eckysaroyd"            },
+  { icon: Linkedin, label: "LinkedIn", href: "https://www.linkedin.com/in/eckysaroyd/" },
 ];
 
 export function Header() {
@@ -82,7 +81,7 @@ export function Header() {
           <Link href="/" className="flex items-center flex-shrink-0">
             <Image
               src="/images/en-logo.png"
-              alt={info.main.name}
+              alt="Eckysaroyd Nyato"
               width={360}
               height={197}
               className="h-12 sm:h-14 md:h-16 w-auto object-contain"

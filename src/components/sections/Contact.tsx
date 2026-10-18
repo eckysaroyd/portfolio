@@ -1,36 +1,35 @@
 "use client";
 
 import { useState } from "react";
-import info from "@/data/user_info";
 import { ContactModal } from "@/components/ContactModal";
 import { Mail, MapPin, Calendar, ArrowRight, Linkedin, Github } from "lucide-react";
 
-const INFO_CARDS = [
-  {
-    icon: Mail,
-    label: "Email",
-    value: info.main.email,
-    href: `mailto:${info.main.email}`,
-    color: "#2563eb",
-  },
-  {
-    icon: MapPin,
-    label: "Location",
-    value: info.main.location,
-    href: null,
-    color: "#10b981",
-  },
-  {
-    icon: Calendar,
-    label: "Availability",
-    value: info.main.availability,
-    href: null,
-    color: "#f59e0b",
-  },
-];
+type ContactProps = {
+  email: string;
+  location: string;
+  availability: string;
+  linkedin: string;
+  github: string;
+  contactDescription: string;
+  contactNote: string;
+};
 
-export default function Contact() {
+export default function Contact({
+  email,
+  location,
+  availability,
+  linkedin,
+  github,
+  contactDescription,
+  contactNote,
+}: ContactProps) {
   const [isOpen, setIsOpen] = useState(false);
+
+  const INFO_CARDS = [
+    { icon: Mail,     label: "Email",        value: email,        href: `mailto:${email}`, color: "#2563eb" },
+    { icon: MapPin,   label: "Location",     value: location,     href: null,              color: "#10b981" },
+    { icon: Calendar, label: "Availability", value: availability, href: null,              color: "#f59e0b" },
+  ];
 
   return (
     <section id="contact" className="pt-20 pb-20 relative overflow-hidden">
@@ -48,7 +47,7 @@ export default function Contact() {
           Let&apos;s Build Something <span className="text-primary">Great</span>
         </h2>
         <p className="text-muted-foreground max-w-xl leading-relaxed">
-          {info.contact.description}
+          {contactDescription}
         </p>
       </div>
 
@@ -97,7 +96,7 @@ export default function Contact() {
           <div className="space-y-2">
             <h3 className="text-xl font-bold text-foreground">Ready to work together?</h3>
             <p className="text-sm text-muted-foreground max-w-md mx-auto">
-              {info.contact.note}
+              {contactNote}
             </p>
           </div>
 
@@ -112,13 +111,13 @@ export default function Contact() {
 
           {/* Social links */}
           <div className="flex items-center justify-center gap-4 pt-1">
-            <a href={info.socials.linkedin} target="_blank" rel="noopener noreferrer"
+            <a href={linkedin} target="_blank" rel="noopener noreferrer"
                className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors">
               <Linkedin className="h-4 w-4" />
               LinkedIn
             </a>
             <span className="text-border">·</span>
-            <a href={info.socials.github} target="_blank" rel="noopener noreferrer"
+            <a href={github} target="_blank" rel="noopener noreferrer"
                className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors">
               <Github className="h-4 w-4" />
               GitHub

@@ -1,7 +1,7 @@
 "use client";
 
-import info from "@/data/user_info";
 import { hexRgba } from "@/lib/utils";
+import type { SkillSet } from "@/types";
 import {
   SiNextdotjs, SiReact, SiVuedotjs, SiTypescript, SiJavascript,
   SiTailwindcss, SiBootstrap, SiVite,
@@ -100,7 +100,7 @@ function SkillChip({ skill }: { skill: string }) {
   );
 }
 
-export default function Skills() {
+export default function Skills({ skills }: { skills: SkillSet }) {
   return (
     <section id="skills" className="pt-20 pb-20">
 
@@ -156,7 +156,7 @@ export default function Skills() {
           </div>
 
           <div className="flex flex-wrap gap-2">
-            {info.skills.ai_automation.map((skill) => (
+            {skills.ai_automation.map((skill) => (
               <SkillChip key={skill} skill={skill} />
             ))}
           </div>
@@ -166,7 +166,7 @@ export default function Skills() {
       {/* Category grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
         {CATEGORIES.map((cat, i) => {
-          const skills = info.skills[cat.key] as string[];
+          const catSkills = skills[cat.key] as string[];
           return (
             <div
               key={cat.key}
@@ -190,14 +190,14 @@ export default function Skills() {
                 <span className={`text-sm font-bold ${cat.accentClass}`}>{cat.label}</span>
                 <span className="ml-auto text-xs font-mono text-muted-foreground bg-muted
                                  border border-border px-2 py-0.5 rounded-full">
-                  {skills.length}
+                  {catSkills.length}
                 </span>
               </div>
 
               <div className="h-px" style={{ background: `linear-gradient(to right, ${hexRgba(cat.color, 0.3)}, transparent)` }} />
 
               <div className="flex flex-wrap gap-1.5">
-                {skills.map((skill) => (
+                {catSkills.map((skill) => (
                   <SkillChip key={skill} skill={skill} />
                 ))}
               </div>

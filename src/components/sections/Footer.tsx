@@ -1,4 +1,4 @@
-import info from "@/data/user_info";
+import { getPortfolioMeta, getServices } from "@/lib/portfolio-data";
 import Link from "next/link";
 import Image from "next/image";
 import { Mail, Linkedin, Github, ArrowUp } from "lucide-react";
@@ -12,14 +12,15 @@ const QUICK_LINKS = [
   { label: "Contact",    href: "/contact"    },
 ];
 
-const SOCIALS = [
-  { icon: Mail,     label: "Email",    href: `mailto:${info.main.email}` },
-  { icon: Linkedin, label: "LinkedIn", href: info.socials.linkedin       },
-  { icon: Github,   label: "GitHub",   href: info.socials.github         },
-];
-
-export default function Footer() {
+export default async function Footer() {
+  const [meta, services] = await Promise.all([getPortfolioMeta(), getServices()]);
   const year = new Date().getFullYear();
+
+  const SOCIALS = [
+    { icon: Mail,     label: "Email",    href: `mailto:${meta.email}` },
+    { icon: Linkedin, label: "LinkedIn", href: meta.linkedin          },
+    { icon: Github,   label: "GitHub",   href: meta.github            },
+  ];
 
   return (
     <footer className="relative border-t border-border pt-12 pb-8 overflow-hidden">
@@ -37,7 +38,7 @@ export default function Footer() {
             <Link href="/" className="inline-flex w-fit">
               <Image
                 src="/images/en-logo.png"
-                alt={info.main.name}
+                alt={meta.name}
                 width={360}
                 height={197}
                 className="h-24 w-auto object-contain"
@@ -84,7 +85,7 @@ export default function Footer() {
           <div className="space-y-4">
             <p className="text-xs font-semibold text-foreground uppercase tracking-wider">Services</p>
             <ul className="space-y-2.5">
-              {info.services.map((service) => (
+              {services.map((service) => (
                 <li key={service}>
                   <span className="text-sm text-muted-foreground">{service}</span>
                 </li>
@@ -97,7 +98,7 @@ export default function Footer() {
         <div className="border-t border-border pt-6 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-xs text-muted-foreground">
             &copy; {year}{" "}
-            <span className="font-medium text-foreground">{info.main.name}</span>
+            <span className="font-medium text-foreground">{meta.name}</span>
             {" · "}All Rights Reserved
           </p>
 

@@ -1,8 +1,9 @@
-import info from "@/data/user_info";
+import { getExperience } from "@/lib/portfolio-data";
 import Image from "next/image";
 import { Building2, MapPin, Download } from "lucide-react";
 
-export default function EducationAndExperience() {
+export default async function EducationAndExperience() {
+  const experience = await getExperience();
   return (
     <section id="experience" className="pt-20 pb-20">
 
@@ -38,7 +39,7 @@ export default function EducationAndExperience() {
                         bg-gradient-to-b from-primary/60 via-border to-transparent" />
 
         <div className="space-y-6">
-          {info.experience.map((exp, i) => {
+          {experience.map((exp, i) => {
             const isCurrent = exp.duration.toLowerCase().includes("present");
             const [company, location] = exp.company.split("|").map((s) => s.trim());
 

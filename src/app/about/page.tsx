@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import info from "@/data/user_info";
+import { getPortfolioMeta, getEducation, getCertifications } from "@/lib/portfolio-data";
 import Image from "next/image";
 import Link from "next/link";
 import {
@@ -16,10 +16,13 @@ import {
 } from "react-icons/si";
 import { hexRgba } from "@/lib/utils";
 
-export const metadata: Metadata = {
-  title: `About — ${info.main.name}`,
-  description: info.main.description,
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const meta = await getPortfolioMeta();
+  return {
+    title: `About — ${meta.name}`,
+    description: meta.description,
+  };
+}
 
 const STATS = [
   { value: "6+",   label: "Years Experience",    Icon: Star      },
@@ -89,7 +92,12 @@ const TECH: { Icon: AnyIcon; name: string; color: string }[] = [
   { Icon: SiExpo as AnyIcon,             name: "React Native", color: "#000020" },
 ];
 
-export default function AboutPage() {
+export default async function AboutPage() {
+  const [meta, education, certifications] = await Promise.all([
+    getPortfolioMeta(),
+    getEducation(),
+    getCertifications(),
+  ]);
   return (
     <main className="min-h-screen bg-background pt-14 sm:pt-16 md:pt-20">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -112,7 +120,7 @@ export default function AboutPage() {
               </h1>
 
               <p className="text-sm sm:text-base text-muted-foreground leading-relaxed max-w-lg">
-                I&apos;m {info.main.name}, a Full-Stack &amp; AI Engineer with 6+ years of experience
+                I&apos;m {meta.name}, a Full-Stack &amp; AI Engineer with 6+ years of experience
                 building scalable web and mobile applications. I currently lead the engineering
                 team at Matchez, where I drive technical strategy, AI/LLM integrations, and
                 product development.
@@ -358,7 +366,7 @@ export default function AboutPage() {
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-            {info.education.map((edu) => (
+            {education.map((edu) => (
               <div key={edu.school}
                    className="p-5 rounded-2xl border border-border bg-card
                               hover:border-primary/30 hover:-translate-y-1 hover:shadow-md
@@ -377,7 +385,7 @@ export default function AboutPage() {
               </div>
             ))}
 
-            {info.certificates.map((cert) => (
+            {certifications.map((cert) => (
               <a
                 key={cert.title}
                 href={cert.link}

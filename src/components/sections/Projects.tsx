@@ -1,9 +1,9 @@
 "use client";
 
 import { useState } from "react";
-import info from "@/data/user_info";
 import { ProjectCard } from "@/components/ProjectCard";
 import { cn } from "@/lib/utils";
+import type { Project } from "@/types";
 
 type Filter = "all" | "ai" | "webapps" | "business";
 
@@ -23,13 +23,13 @@ const FILTERS: { id: Filter; label: string }[] = [
   { id: "business", label: "Business Sites"},
 ];
 
-export default function Projects() {
+export default function Projects({ projects }: { projects: Project[] }) {
   const [active, setActive] = useState<Filter>("all");
 
   const displayed =
     active === "all"
-      ? info.projects
-      : info.projects.filter((p) => getFilter(p.category) === active);
+      ? projects
+      : projects.filter((p) => getFilter(p.category) === active);
 
   return (
     <section id="projects" className="pt-20 pb-20">

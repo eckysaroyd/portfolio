@@ -1,4 +1,4 @@
-import info from "@/data/user_info";
+import { getPortfolioMeta } from "@/lib/portfolio-data";
 import Image from "next/image";
 import Link from "next/link";
 import { MapPin, Download, ArrowRight, Star, BarChart2, Cpu } from "lucide-react";
@@ -12,8 +12,9 @@ const STATS = [
 
 const TAGS = ["Next.js", "Node.js", "TypeScript", "AI/LLM", "Supabase"];
 
-export default function Hero() {
-  const [firstName, ...rest] = info.main.name.split(" ");
+export default async function Hero() {
+  const meta = await getPortfolioMeta();
+  const [firstName, ...rest] = meta.name.split(" ");
   const lastName = rest.join(" ");
 
   return (
@@ -40,13 +41,13 @@ export default function Hero() {
               <span className="block text-primary">{lastName}</span>
             </h1>
             <p className="mt-3 text-lg sm:text-xl font-semibold text-muted-foreground">
-              {info.main.role}
+              {meta.role}
             </p>
           </div>
 
           {/* Description */}
           <p className="text-base text-muted-foreground leading-relaxed max-w-lg">
-            {info.main.description}
+            {meta.description}
           </p>
 
           {/* Location + tech tags */}
@@ -54,7 +55,7 @@ export default function Hero() {
             <span className="flex items-center gap-1.5 text-sm text-muted-foreground
                              bg-muted px-3 py-1.5 rounded-full border border-border">
               <MapPin className="h-3.5 w-3.5 flex-shrink-0" />
-              {info.main.location}
+              {meta.location}
             </span>
             {TAGS.map((t) => (
               <span key={t} className="text-sm text-primary bg-primary/10 border border-primary/20
@@ -98,8 +99,8 @@ export default function Hero() {
               <div className="relative w-60 h-72 sm:w-72 sm:h-[340px] lg:w-80 lg:h-[380px]
                               rounded-2xl overflow-hidden shadow-2xl">
                 <Image
-                  src={info.main.photo}
-                  alt={`${info.main.name} — ${info.main.role}`}
+                  src={meta.photo}
+                  alt={`${meta.name} — ${meta.role}`}
                   fill
                   className="object-cover object-top"
                   priority
