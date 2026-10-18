@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import nodemailer from "nodemailer";
-import { supabaseService } from "@/utils/supabase/service";
+import { getSupabaseService } from "@/utils/supabase/service";
 
 // ── Types ─────────────────────────────────────────────────────────────────
 interface ContactPayload {
@@ -313,7 +313,7 @@ export async function POST(req: NextRequest) {
 
   try {
     // Save to Supabase (non-blocking — don't fail the request if DB insert fails)
-    supabaseService
+    getSupabaseService()
       .from("contact_submissions")
       .insert({
         name:         payload.name,

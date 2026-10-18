@@ -1,13 +1,15 @@
 import { createClient } from "@supabase/supabase-js";
 
-const supabase = createClient(
-  process.env.NEXT_PUBLIC_SUPABASE_URL!,
-  process.env.SUPABASE_SERVICE_ROLE_KEY!
-);
+function db() {
+  return createClient(
+    process.env.NEXT_PUBLIC_SUPABASE_URL!,
+    process.env.SUPABASE_SERVICE_ROLE_KEY!
+  );
+}
 
 // ── Portfolio meta (single row) ──────────────────────────────────────────────
 export async function getPortfolioMeta() {
-  const { data, error } = await supabase
+  const { data, error } = await db()
     .from("portfolio_meta")
     .select("*")
     .single();
@@ -38,7 +40,7 @@ export async function getPortfolioMeta() {
 
 // ── Projects ─────────────────────────────────────────────────────────────────
 export async function getProjects() {
-  const { data, error } = await supabase
+  const { data, error } = await db()
     .from("projects")
     .select("*")
     .order("sort_order");
@@ -60,7 +62,7 @@ export async function getProjects() {
 
 // ── Skills ───────────────────────────────────────────────────────────────────
 export async function getSkills() {
-  const { data: categories, error } = await supabase
+  const { data: categories, error } = await db()
     .from("skill_categories")
     .select("key, skills(name, sort_order)")
     .order("sort_order");
@@ -86,7 +88,7 @@ export async function getSkills() {
 
 // ── Experience ───────────────────────────────────────────────────────────────
 export async function getExperience() {
-  const { data, error } = await supabase
+  const { data, error } = await db()
     .from("experience")
     .select("*")
     .order("sort_order");
@@ -104,7 +106,7 @@ export async function getExperience() {
 
 // ── Education ────────────────────────────────────────────────────────────────
 export async function getEducation() {
-  const { data, error } = await supabase
+  const { data, error } = await db()
     .from("education")
     .select("*")
     .order("sort_order");
@@ -121,7 +123,7 @@ export async function getEducation() {
 
 // ── Certifications ───────────────────────────────────────────────────────────
 export async function getCertifications() {
-  const { data, error } = await supabase
+  const { data, error } = await db()
     .from("certifications")
     .select("*")
     .order("sort_order");
@@ -138,7 +140,7 @@ export async function getCertifications() {
 
 // ── Services ─────────────────────────────────────────────────────────────────
 export async function getServices() {
-  const { data, error } = await supabase
+  const { data, error } = await db()
     .from("services")
     .select("*")
     .order("sort_order");
