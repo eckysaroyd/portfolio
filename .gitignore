@@ -28,3 +28,12 @@ out
 # Local docs and Claude AI session files
 docs/
 .claude/
+.vercel
+.env*
+
+# Playwright MCP session screenshots
+.playwright-mcp/
+*.png
+*.jpg
+!public/**/*.png
+!public/**/*.jpg
