@@ -123,7 +123,7 @@ export default function Hero() {
             </div>
 
             {/* Badge — left middle: 50+ Projects */}
-            <div className="absolute top-1/3 -left-2 sm:-left-16 z-10">
+            <div className="absolute top-1/3 -left-2 sm:-left-16 z-10 hidden sm:block">
               <div className="flex items-center gap-1.5 sm:gap-2 bg-card border border-border
                               rounded-xl px-2 py-1 sm:px-3 sm:py-2 shadow-xl backdrop-blur-sm">
                 <div className="h-5 w-5 sm:h-7 sm:w-7 rounded-lg bg-primary/15 flex items-center justify-center flex-shrink-0">
