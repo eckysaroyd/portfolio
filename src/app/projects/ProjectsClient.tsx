@@ -365,7 +365,7 @@ export default function ProjectsClient({ projects }: { projects: Project[] }) {
                 </p>
               </div>
               <Link
-                href="/#contact"
+                href="/contact"
                 className="inline-flex items-center gap-2 px-7 py-3.5 bg-primary text-white
                            font-semibold rounded-xl shadow-lg shadow-primary/30 text-sm flex-shrink-0
                            hover:bg-primary/90 hover:-translate-y-0.5 transition-all duration-200 whitespace-nowrap"
@@ -387,11 +387,11 @@ export default function ProjectsClient({ projects }: { projects: Project[] }) {
 
               <div className="flex items-center gap-5">
                 {[
-                  { label: "Home",       href: "/"          },
-                  { label: "About",      href: "/about"     },
-                  { label: "Experience", href: "/#experience"},
-                  { label: "Skills",     href: "/#skills"   },
-                  { label: "Contact",    href: "/#contact"  },
+                  { label: "Home",       href: "/"           },
+                  { label: "About",      href: "/about"      },
+                  { label: "Experience", href: "/experience" },
+                  { label: "Skills",     href: "/skills"     },
+                  { label: "Contact",    href: "/contact"    },
                 ].map(({ label, href }) => (
                   <Link key={label} href={href}
                         className="text-xs text-muted-foreground hover:text-primary transition-colors">
