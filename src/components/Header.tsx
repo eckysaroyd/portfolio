@@ -76,16 +76,16 @@ export function Header() {
       }`}
     >
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
+        <div className="flex items-center justify-between h-20">
 
           {/* Logo */}
           <Link href="/" className="flex items-center flex-shrink-0">
             <Image
               src="/images/en-logo.png"
               alt={info.main.name}
-              width={280}
-              height={153}
-              className="h-16 w-auto object-contain"
+              width={360}
+              height={197}
+              className="h-20 w-auto object-contain"
               priority
             />
           </Link>
