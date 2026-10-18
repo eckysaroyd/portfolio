@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import info from "@/data/user_info";
 import { ThemeToggle } from "@/components/ThemeToggle";
@@ -78,14 +79,15 @@ export function Header() {
         <div className="flex items-center justify-between h-16">
 
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2.5 group flex-shrink-0">
-            <div className="w-9 h-9 rounded-xl bg-primary flex items-center justify-center shadow-md
-                            group-hover:shadow-primary/40 transition-shadow duration-200">
-              <span className="text-white text-sm font-black tracking-tight">EN</span>
-            </div>
-            <span className="font-bold text-foreground text-sm hidden sm:block">
-              {info.main.name}
-            </span>
+          <Link href="/" className="flex items-center flex-shrink-0">
+            <Image
+              src="/images/en-logo.png"
+              alt={info.main.name}
+              width={160}
+              height={52}
+              className="h-9 w-auto object-contain"
+              priority
+            />
           </Link>
 
           {/* Desktop nav */}

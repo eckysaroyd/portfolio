@@ -1,5 +1,6 @@
 import info from "@/data/user_info";
 import Link from "next/link";
+import Image from "next/image";
 import { Mail, Linkedin, Github, ArrowUp } from "lucide-react";
 
 const QUICK_LINKS = [
@@ -31,11 +32,14 @@ export default function Footer() {
 
         {/* Brand */}
         <div className="space-y-4">
-          <a href="#hero" className="flex items-center gap-2.5 group w-fit">
-            <div className="w-9 h-9 rounded-xl bg-primary flex items-center justify-center shadow-md">
-              <span className="text-white text-sm font-black tracking-tight">EN</span>
-            </div>
-            <span className="font-bold text-foreground text-sm">{info.main.name}</span>
+          <a href="#hero" className="inline-flex w-fit">
+            <Image
+              src="/images/en-logo.png"
+              alt={info.main.name}
+              width={160}
+              height={52}
+              className="h-10 w-auto object-contain"
+            />
           </a>
           <p className="text-sm text-muted-foreground leading-relaxed max-w-xs">
             Head of Engineering &amp; Full-Stack AI Engineer building scalable systems
