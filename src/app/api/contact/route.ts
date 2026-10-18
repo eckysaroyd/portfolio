@@ -36,9 +36,18 @@ function validate(body: Partial<ContactPayload>): string | null {
 
 const BASE = "https://eckysaroyd.vercel.app";
 
-// EN wordmark logo — hosted on Vercel, transparent PNG
-const logoImg = (height: number) =>
-  `<img src="${BASE}/images/email-logo.png" alt="Eckysaroyd Nyato" height="${height}" style="height:${height}px;width:auto;display:block;border:0;" loading="eager">`;
+// Logo block: circular EN orbit icon + name + tagline (matches template header/footer)
+const logoImg = (iconSize: number, nameSize: number, tagSize: number) => `
+  <table cellpadding="0" cellspacing="0"><tr>
+    <td style="padding-right:10px;vertical-align:middle;">
+      <img src="${BASE}/images/email-icon.png" alt="EN" width="${iconSize}" height="${iconSize}"
+           style="width:${iconSize}px;height:${iconSize}px;display:block;border:0;border-radius:${Math.round(iconSize * 0.22)}px;" loading="eager">
+    </td>
+    <td valign="middle">
+      <p style="margin:0;font-size:${nameSize}px;font-weight:800;color:#1e293b;line-height:1.2;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;">Eckysaroyd<br>Nyato</p>
+      <p style="margin:3px 0 0;font-size:${tagSize}px;color:#94a3b8;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;">Full-Stack &amp; AI Engineer</p>
+    </td>
+  </tr></table>`;
 
 // Social icon circle
 const socialCircle = (href: string, label: string, color: string) =>
@@ -71,7 +80,7 @@ function notificationHtml(p: ContactPayload): string {
     <!-- HEADER: EN wordmark logo + notification badge -->
     <tr><td style="padding:20px 28px;background:#ffffff;border-bottom:1px solid #f0f4ff;">
       <table width="100%" cellpadding="0" cellspacing="0"><tr>
-        <td valign="middle">${logoImg(50)}</td>
+        <td valign="middle">${logoImg(50, 15, 11)}</td>
         <td align="right" valign="middle">
           <span style="display:inline-block;background:#eff6ff;border:1px solid #bfdbfe;border-radius:20px;padding:7px 16px;font-size:12px;font-weight:600;color:#2563eb;white-space:nowrap;">&#x2709;&nbsp; Portfolio Notification</span>
         </td>
@@ -155,7 +164,7 @@ function notificationHtml(p: ContactPayload): string {
     <!-- FOOTER -->
     <tr><td style="padding:20px 28px;background:#f8faff;border-top:1px solid #e8eef8;">
       <table width="100%" cellpadding="0" cellspacing="0"><tr>
-        <td valign="middle" width="38%">${logoImg(40)}</td>
+        <td valign="middle" width="38%">${logoImg(38, 13, 10)}</td>
         <td align="center" valign="middle" width="28%">
           <table cellpadding="0" cellspacing="0" align="center"><tr>
             ${socialCircle("https://www.linkedin.com/in/eckysaroyd/", "in",  "#2563eb")}
@@ -200,7 +209,7 @@ function autoReplyHtml(p: ContactPayload): string {
     <!-- HEADER: EN wordmark logo + badge -->
     <tr><td style="padding:20px 28px;background:#ffffff;border-bottom:1px solid #f0f4ff;">
       <table width="100%" cellpadding="0" cellspacing="0"><tr>
-        <td valign="middle">${logoImg(50)}</td>
+        <td valign="middle">${logoImg(50, 15, 11)}</td>
         <td align="right" valign="middle">
           <span style="display:inline-block;background:#f0fdf4;border:1px solid #bbf7d0;border-radius:20px;padding:7px 16px;font-size:12px;font-weight:600;color:#16a34a;white-space:nowrap;">&#x2713;&nbsp; Message Confirmed</span>
         </td>
@@ -268,7 +277,7 @@ function autoReplyHtml(p: ContactPayload): string {
     <!-- FOOTER -->
     <tr><td style="padding:20px 28px;background:#f8faff;border-top:1px solid #e8eef8;">
       <table width="100%" cellpadding="0" cellspacing="0"><tr>
-        <td valign="middle" width="38%">${logoImg(40)}</td>
+        <td valign="middle" width="38%">${logoImg(38, 13, 10)}</td>
         <td align="center" valign="middle" width="28%">
           <table cellpadding="0" cellspacing="0" align="center"><tr>
             ${socialCircle("https://www.linkedin.com/in/eckysaroyd/", "in",  "#2563eb")}
