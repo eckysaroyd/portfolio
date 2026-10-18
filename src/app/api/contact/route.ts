@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import nodemailer from "nodemailer";
+import { supabaseService } from "@/utils/supabase/service";
 
 // ── Types ─────────────────────────────────────────────────────────────────
 interface ContactPayload {
@@ -311,6 +312,23 @@ export async function POST(req: NextRequest) {
   const to      = process.env.CONTACT_EMAIL_TO!;
 
   try {
+    // Save to Supabase (non-blocking — don't fail the request if DB insert fails)
+    supabaseService
+      .from("contact_submissions")
+      .insert({
+        name:         payload.name,
+        email:        payload.email,
+        subject:      payload.subject      || null,
+        message:      payload.message,
+        project_type: payload.projectType  || null,
+        budget:       payload.budget       || null,
+        timeline:     payload.timeline     || null,
+      })
+      .then(({ error }) => {
+        if (error) console.error("[contact/route] Supabase insert error:", error.message);
+      });
+
+    // Send notification email to owner
     await transporter.sendMail({
       from:    `"Portfolio Contact" <${process.env.SMTP_USER}>`,
       to,
@@ -319,6 +337,7 @@ export async function POST(req: NextRequest) {
       html:    notificationHtml(payload),
     });
 
+    // Send auto-reply to sender
     await transporter.sendMail({
       from:    `"Eckysaroyd Nyato" <${process.env.SMTP_USER}>`,
       to:      payload.email,
