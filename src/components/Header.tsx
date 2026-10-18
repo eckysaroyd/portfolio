@@ -69,14 +69,14 @@ export function Header() {
 
   return (
     <header
-      className={`fixed top-0 inset-x-0 z-50 transition-all duration-300 ${
+      className={`fixed top-0 inset-x-0 z-50 transition-all duration-300 border-b ${
         scrolled
-          ? "bg-background/90 backdrop-blur-xl border-b border-border shadow-sm"
-          : "bg-transparent"
+          ? "bg-background/95 backdrop-blur-xl border-border shadow-sm"
+          : "bg-background/90 backdrop-blur-lg border-border/50"
       }`}
     >
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20">
+        <div className="flex items-center justify-between h-14 sm:h-16 md:h-20">
 
           {/* Logo */}
           <Link href="/" className="flex items-center flex-shrink-0">
@@ -85,7 +85,7 @@ export function Header() {
               alt={info.main.name}
               width={360}
               height={197}
-              className="h-20 w-auto object-contain"
+              className="h-12 sm:h-14 md:h-16 w-auto object-contain"
               priority
             />
           </Link>

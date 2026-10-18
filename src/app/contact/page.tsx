@@ -85,7 +85,7 @@ export default function ContactPage() {
   const disabled = submitting || !form.name.trim() || !form.email.trim() || !form.message.trim();
 
   return (
-    <main className="min-h-screen bg-background pt-16">
+    <main className="min-h-screen bg-background pt-14 sm:pt-16 md:pt-20">
 
       {/* ── Hero ── */}
       <section className="relative overflow-hidden">
@@ -436,8 +436,6 @@ export default function ContactPage() {
             </div>
           </div>
           <div className="flex items-center gap-2 flex-shrink-0">
-            {/* Paper plane decorative */}
-            <Send className="h-6 w-6 text-primary/40 hidden sm:block" />
             <button
               onClick={() => {
                 document.querySelector("form")?.scrollIntoView({ behavior: "smooth" });

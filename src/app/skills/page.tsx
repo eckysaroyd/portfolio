@@ -208,11 +208,11 @@ export default function SkillsPage() {
   }, [query]);
 
   return (
-    <main className="min-h-screen bg-background pt-16">
+    <main className="min-h-screen bg-background pt-14 sm:pt-16 md:pt-20">
 
       {/* ── Hero ── */}
       <section className="relative overflow-hidden">
-        <div className="relative h-[340px] sm:h-[380px]">
+        <div className="relative min-h-[400px] sm:h-[380px]">
           <Image
             src="/images/skills-hero-bg.png"
             alt="Skills hero"

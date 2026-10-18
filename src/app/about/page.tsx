@@ -91,7 +91,7 @@ const TECH: { Icon: AnyIcon; name: string; color: string }[] = [
 
 export default function AboutPage() {
   return (
-    <main className="min-h-screen bg-background pt-16">
+    <main className="min-h-screen bg-background pt-14 sm:pt-16 md:pt-20">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* ── Hero ────────────────────────────────────────────────────────── */}
