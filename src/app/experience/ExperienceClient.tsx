@@ -142,7 +142,7 @@ export default function ExperienceClient({ experience }: { experience: Experienc
 
                 {/* CTAs */}
                 <div className="flex gap-3 pt-1">
-                  <a href="/Eckysaroyd-Nyato-CV.pdf" download
+                  <a href="/Eckysaroyd-CV.pdf" download
                      className="inline-flex items-center gap-2 px-5 py-2.5 bg-primary text-white
                                 font-semibold rounded-xl text-sm shadow-lg hover:bg-primary/90
                                 hover:-translate-y-0.5 transition-all duration-200">

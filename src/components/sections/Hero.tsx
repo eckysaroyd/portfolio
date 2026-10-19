@@ -76,7 +76,7 @@ export default async function Hero() {
               View My Work <ArrowRight className="h-4 w-4" />
             </Link>
             <a
-              href="/Eckysaroyd-Nyato-CV.pdf"
+              href="/Eckysaroyd-CV.pdf"
               download
               className="inline-flex items-center justify-center gap-2 px-6 py-3 border border-border
                          text-foreground font-semibold rounded-xl hover:border-primary/50

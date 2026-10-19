@@ -135,7 +135,7 @@ export function Header() {
 
             {/* Download CV button */}
             <a
-              href="/Eckysaroyd-Nyato-CV.pdf"
+              href="/Eckysaroyd-CV.pdf"
               download
               className="hidden md:flex items-center gap-1.5 px-4 py-2 bg-primary text-white text-sm
                          font-semibold rounded-lg hover:bg-primary/90 transition-colors duration-200
@@ -202,7 +202,7 @@ export function Header() {
               </Link>
             ))}
             <a
-              href="/Eckysaroyd-Nyato-CV.pdf"
+              href="/Eckysaroyd-CV.pdf"
               download
               onClick={() => setMenuOpen(false)}
               className="ml-auto flex items-center gap-1.5 px-3 py-1.5 bg-primary text-white text-xs

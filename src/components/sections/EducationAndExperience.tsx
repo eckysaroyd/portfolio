@@ -21,7 +21,7 @@ export default async function EducationAndExperience() {
           </p>
         </div>
         <a
-          href="/Eckysaroyd-Nyato-CV.pdf"
+          href="/Eckysaroyd-CV.pdf"
           download
           className="inline-flex items-center gap-2 px-5 py-2.5 border border-border rounded-xl
                      text-sm font-semibold text-foreground hover:border-primary/50 hover:text-primary

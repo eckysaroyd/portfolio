@@ -142,7 +142,7 @@ export default async function AboutPage() {
 
               <div className="flex flex-col sm:flex-row gap-3">
                 <a
-                  href="/Eckysaroyd-Nyato-CV.pdf"
+                  href="/Eckysaroyd-CV.pdf"
                   download
                   className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-primary text-white
                              font-semibold rounded-xl shadow-lg shadow-primary/30 text-sm
