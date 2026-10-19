@@ -1,4 +1,4 @@
-import { getPortfolioMeta, getServices } from "@/lib/portfolio-data";
+import info from "@/data/user_info";
 import Link from "next/link";
 import Image from "next/image";
 import { Mail, Linkedin, Github, ArrowUp } from "lucide-react";
@@ -12,14 +12,15 @@ const QUICK_LINKS = [
   { label: "Contact",    href: "/contact"    },
 ];
 
-export default async function Footer() {
-  const [meta, services] = await Promise.all([getPortfolioMeta(), getServices()]);
+export default function Footer() {
+  const meta = info.main;
+  const services = info.services;
   const year = new Date().getFullYear();
 
   const SOCIALS = [
-    { icon: Mail,     label: "Email",    href: `mailto:${meta.email}` },
-    { icon: Linkedin, label: "LinkedIn", href: meta.linkedin          },
-    { icon: Github,   label: "GitHub",   href: meta.github            },
+    { icon: Mail,     label: "Email",    href: `mailto:${meta.email}`    },
+    { icon: Linkedin, label: "LinkedIn", href: info.socials.linkedin      },
+    { icon: Github,   label: "GitHub",   href: info.socials.github        },
   ];
 
   return (
