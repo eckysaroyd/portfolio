@@ -8,7 +8,7 @@ import { ThemeToggle } from "@/components/ThemeToggle";
 import { Github, Linkedin, Menu, X, Download } from "lucide-react";
 
 const NAV = [
-  { label: "Home",       href: "/#hero",      id: "hero"       },
+  { label: "Home",       href: "/",           id: "hero"       },
   { label: "About",      href: "/about",       id: "about"      },
   { label: "Projects",   href: "/projects",   id: "projects"   },
   { label: "Experience", href: "/experience",  id: "experience" },
