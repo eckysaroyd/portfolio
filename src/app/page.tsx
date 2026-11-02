@@ -1,4 +1,6 @@
 import { getPortfolioMeta, getProjects, getSkills } from "@/lib/portfolio-data";
+
+export const dynamic = "force-dynamic";
 import Hero from "@/components/sections/Hero";
 import Projects from "@/components/sections/Projects";
 import EducationAndExperience from "@/components/sections/EducationAndExperience";

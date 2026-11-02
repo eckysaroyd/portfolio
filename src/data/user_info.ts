@@ -70,18 +70,6 @@ const info: UserInfo = {
       screenshot: "/images/projects/somali-fuel.png",
     },
     {
-      title: "Ruach Coffee",
-      category: "Business Website",
-      description:
-        "Ruach Coffee is a premium coffee brand platform engineered to reflect the quality, identity, and customer experience that the Ruach Premium brand demands. Built on Next.js and TypeScript with a Supabase backend, the platform combines brand storytelling with a polished product showcase and customer engagement layer — delivering a fast, visually compelling digital presence that converts visitors into loyal customers. The architecture is built for performance and scale: server-side rendering for instant load times, Supabase for real-time data management, and a fully responsive design tuned for the modern consumer browsing on any device. Ruach Coffee is proof that premium brand engineering and technical rigour are not mutually exclusive.",
-      technologies: "Next.js,TypeScript,Supabase,Tailwind CSS",
-      highlights: ["Premium brand digital presence", "Next.js SSR for fast load times", "Supabase real-time backend", "Responsive across all devices"],
-      github: "",
-      link: "https://ruachpremium.com/",
-      featured: false,
-      screenshot: "/images/projects/ruach-coffee.png",
-    },
-    {
       title: "AutoOps Schools",
       category: "AI SaaS Platform",
       description:

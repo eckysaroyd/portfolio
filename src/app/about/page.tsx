@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { getPortfolioMeta, getEducation, getCertifications } from "@/lib/portfolio-data";
+
+export const dynamic = "force-dynamic";
 import Image from "next/image";
 import Link from "next/link";
 import {
